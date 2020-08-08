@@ -1,3 +1,2 @@
-# OOPs-Project-3rd-sem
+# Institute Portal
 
-** Name to be changed
