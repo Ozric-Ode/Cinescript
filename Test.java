@@ -62,6 +62,6 @@ class Test {
 			System.out.println(s2);
 		}
 		else
-			System.out.println(") bracked missing in one of the functions");
+			System.out.println(") bracket missing in one of the functions");
 	}
 }
