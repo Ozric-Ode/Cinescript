@@ -1,12 +1,12 @@
 
 import java.util.Stack; 
 
-public class evaluator 
+public class Evaluator 
 { 
 	public static int evaluate(String expression) 
 	{ 
         char[] tokens = expression.toCharArray(); 
-        evaluator obj= new evaluator();
+        Evaluator obj= new Evaluator();
 
 		Stack<Integer> values = new Stack<Integer>(); 
 
