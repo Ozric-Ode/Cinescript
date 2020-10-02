@@ -1,4 +1,4 @@
-package Features;
+package features;
 
 
 import java.util.Stack; 
@@ -87,6 +87,5 @@ public class Evaluator
        
 		return 0; 
 	} 
-
-	
+		
 }

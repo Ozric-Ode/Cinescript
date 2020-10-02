@@ -1,4 +1,4 @@
-package FileHandling;
+package filehandling;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,13 +6,15 @@ import java.util.*;
 
 public class Input {
     public static void main(String[] args) {
-        try {
-            File myObj = new File("C:\\Users\\Chirag\\CPPFiles\\CodeBusta-Language\\Test\\TestCode.txt");
+		try {
+			File myObj = new File("..\\Test\\TestCode2.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
+				String data = myReader.nextLine();
                 if (data.charAt(0) == 'p') {
-                    // Call print class from Features Package
+					Print printObj = new Print();
+					//calling Print class from filehandling package 
+					printObj.print(data);
                 }
             }
             myReader.close();
