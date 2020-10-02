@@ -59,7 +59,7 @@ class Print {
 			s_exp="";
         
         try {
-            FileWriter writer = new FileWriter("..\\Print\\OutputFile.txt");
+            FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt");
             writer.write(s_final);
             writer.close();
         } catch (IOException e) {

@@ -8,9 +8,9 @@ public class Evaluator
 { 
 	public static int evaluate(String expression1) 
 	{ 
-		String expression="";
-		for(int i=0;i<expression1.length();i++)
-		expression=expression+" "+expression1.charAt(i);
+		// String expression="";
+		// for(int i=0;i<expression1.length();i++)
+		// expression=expression+" "+expression1.charAt(i);
 
 		char[] tokens = expression.toCharArray(); 
 
