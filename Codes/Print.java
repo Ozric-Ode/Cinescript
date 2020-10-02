@@ -59,7 +59,7 @@ class Print {
         
         try {
             FileWriter writer = new FileWriter("..\\Print\\OutputFile.txt");
-            writer.write(s2);
+            writer.write(s_final);
             writer.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
