@@ -7,20 +7,17 @@ import java.io.IOException; // Import the IOException class to handle errors
 import features.*;
 
 class Print {
-    public void print(String s1) {
+    public static void print(String s) {
         
-        //+ ====> Concatenation
-		//'' ===> String in print function
-		String s=s1.substring(6,s1.length()-2);
+        //, ====> Concatenation
+		//" " ===> String in print function
+	
 		Stack<Character> mainStack = new Stack<Character>();
-		String s_cnc=" ";
-		String s_exp=" ";
-		String s_final=" ";
+		String s_cnc="";
+		String s_exp="";
+		String s_final="";
 
 
-       
-      
-        boolean isStarted = false;
             for (int j = 0; j < s.length(); j++) {
 
 				if(s.charAt(j)==(char)34)
@@ -55,7 +52,9 @@ class Print {
 				}
 
 
-            }
+			}
+			s_final=s_final+Evaluator.evaluate(s_exp);
+			s_exp="";
         
         try {
             FileWriter writer = new FileWriter("..\\Print\\OutputFile.txt");
