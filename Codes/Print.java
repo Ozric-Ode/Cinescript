@@ -6,7 +6,7 @@ import java.io.IOException; // Import the IOException class to handle errors
 
 import features.*;
 
-class Print {
+class PrintInfo {
     public static void print(String s) {
         
         //, ====> Concatenation
@@ -57,7 +57,6 @@ class Print {
 			if(s_exp.length()!=0)
 			s_final=s_final+Evaluator.evaluate(s_exp);
 			s_exp="";
-        
         try {
             FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt");
             writer.write(s_final);

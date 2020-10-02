@@ -11,11 +11,9 @@ public class Input {
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
-                if (data.charAt(0) == 'p') {
-					Print printObj = new Print();
-					//calling Print class from filehandling package 
-					printObj.print(data);
-                }
+                // if (data.charAt(0) == 'p') {
+					PrintInfo.print(data);
+                // }
             }
             myReader.close();
 
