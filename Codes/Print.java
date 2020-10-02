@@ -7,45 +7,58 @@ import java.io.IOException; // Import the IOException class to handle errors
 import features.*;
 
 class Print {
-    public void print(String s) {
+    public static void print(String s) {
         
-        //+ ====> Concatenation
-        //'' ===> String in print function
-        Stack<Character> mainStack = new Stack<Character>();
-        String s1 = "";
-        String s2 = "";
-        int i=6;
-        boolean isStarted = false;
-            for (int j = i; j < s.length(); j++) {
-                if (s.charAt(j) == '(' && isStarted == false) {
-                    mainStack.push((Character) s.charAt(j));
-                    isStarted = true;
-                    j++;
-                    continue;
-                }
-                if (s.charAt(j) == (char) 34) {
-                    if (isStarted == false) {
-                        isStarted = true;
-                        continue;
-                    } else if (isStarted == true) {
-                        isStarted = false;
-                    }
-                }
-                if (s.charAt(j) == '+' && isStarted==false) {
-                    continue;
-                }
-                if (s.charAt(j) == ')' && isStarted == false) {
-                    mainStack.pop();
-                    break;
-                }
-                if (s.charAt(j) != (char) 34 && isStarted==true) {
-                    s2 = s2.concat(Character.toString(s.charAt(j)));
-                }
-            }
+        //, ====> Concatenation
+		//" " ===> String in print function
+	
+		Stack<Character> mainStack = new Stack<Character>();
+		String s_cnc="";
+		String s_exp="";
+		String s_final="";
+
+
+            for (int j = 0; j < s.length(); j++) {
+
+				if(s.charAt(j)==(char)34)
+				{
+					if(mainStack.empty())
+					{mainStack.push((Character) s.charAt(j));}
+
+					else
+					{
+
+						s_final=s_final+s_cnc;
+						s_cnc="";
+						mainStack.pop();
+					}
+				continue;
+				}
+
+				if(!mainStack.empty())
+				{
+					s_cnc=s_cnc+s.charAt(j);
+				}
+				else
+				{
+					if(s.charAt(j)==',')
+					{
+						s_final=s_final+Evaluator.evaluate(s_exp);
+						s_exp="";
+					}
+					else
+					s_exp=s_exp+s.charAt(j);
+
+				}
+
+
+			}
+			s_final=s_final+Evaluator.evaluate(s_exp);
+			s_exp="";
         
         try {
             FileWriter writer = new FileWriter("..\\Print\\OutputFile.txt");
-            writer.write(s2);
+            writer.write(s_final);
             writer.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
