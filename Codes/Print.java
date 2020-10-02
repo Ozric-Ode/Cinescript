@@ -11,7 +11,7 @@ class Print {
         
         //+ ====> Concatenation
 		//'' ===> String in print function
-		String s=s1.substring(6,s1.length()-3);
+		String s=s1.substring(6,s1.length()-2);
 		Stack<Character> mainStack = new Stack<Character>();
 		String s_cnc=" ";
 		String s_exp=" ";
