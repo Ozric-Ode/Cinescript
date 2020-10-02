@@ -43,6 +43,7 @@ class Print {
 				{
 					if(s.charAt(j)==',')
 					{
+						if(s_exp.length()!=0)
 						s_final=s_final+Evaluator.evaluate(s_exp);
 						s_exp="";
 					}
@@ -53,6 +54,7 @@ class Print {
 
 
 			}
+			if(s_exp.length()!=0)
 			s_final=s_final+Evaluator.evaluate(s_exp);
 			s_exp="";
         
