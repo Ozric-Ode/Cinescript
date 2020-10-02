@@ -18,7 +18,7 @@ public class Print {
 		Stack<Character> mainStack = new Stack<Character>();
 		String s1 = "";
 		String s2 = "";
-		String s3="";
+		String s3 = "";
 		int i;
 		for (i = 0; i < s.length(); i++) {
 			while (s.charAt(i) != '(') {
@@ -32,9 +32,9 @@ public class Print {
 		if (list.indexOf(s1) == -1) {
 			System.out.println("Undefined Function: " + s1);
 		} else {
-			boolean isStarted = false,isEquation=false;
+			boolean isStarted = false, isEquation = false;
 			for (int j = i; j < s.length(); j++) {
-				if(isEquation==true && isStarted==false && s.charAt(j)!=','){
+				if (isEquation == true && isStarted == false && s.charAt(j) != ',') {
 					s3.concat(Character.toString(s.charAt(j)));
 					continue;
 				}
@@ -47,7 +47,8 @@ public class Print {
 				if (s.charAt(j) == (char) 34)
 				// here we are using "" for string in function.Only accepting string with " "
 				// if (s.charAt(j) == (char) 39)//if we want to use '' for string in function
-				//Example: Here print("abc") will give abc as output but print('abc') will not any output
+				// Example: Here print("abc") will give abc as output but print('abc') will not
+				// any output
 				{
 					if (isStarted == false) {
 						isStarted = true;
@@ -57,21 +58,22 @@ public class Print {
 					}
 				}
 				if (s.charAt(j) == ',' && isStarted == false) {
-					if(isEquation==true){
-						features.Evaluator exp=new features.Evaluator();
-						int result= exp.evaluate(s3);
-						s3=Integer.toString(result);
-						s2=s2.concat(s3);
-						isEquation=false;
+					if (isEquation == true) {
+						features.Evaluator exp = new features.Evaluator();
+						int result = exp.evaluate(s3);
+						s3 = Integer.toString(result);
+						s2 = s2.concat(s3);
+						isEquation = false;
 						continue;
 					}
-					if(isEquation==false && j+1<s.length() && s.charAt(j+1)!=(char)34 && s.charAt(j+1)!=')'){
-						isEquation=true;
+					if (isEquation == false && j + 1 < s.length() && s.charAt(j + 1) != (char) 34
+							&& s.charAt(j + 1) != ')') {
+						isEquation = true;
 					}
 					continue;
 				}
 
-				if (s.charAt(j) == ')' && isStarted == false && isEquation==false) {
+				if (s.charAt(j) == ')' && isStarted == false && isEquation == false) {
 					mainStack.pop();
 					break;
 				}
