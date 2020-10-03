@@ -6,14 +6,16 @@ import java.util.*;
 
 public class Input {
     public static void main(String[] args) {
+        Core core = new Core();
 		try {
-			File myObj = new File("..\\Test\\TestCode2.txt");
+			File myObj = new File("..\\Test\\TestCode.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
-                // if (data.charAt(0) == 'p') {
-					PrintInfo.print(data);
-                // }
+                //Core.command(data);
+                //PrintInfo.print(data);
+                core.command(data);
+
             }
             myReader.close();
 

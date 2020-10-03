@@ -1,1 +1,1 @@
-print("This is our first code "," equals ");
+elaan("This is our first code "," equals ");
