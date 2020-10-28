@@ -1,4 +1,4 @@
-package filehandling;
+//package filehandling;
 
 import java.util.*;
 import features.Conditon;
@@ -7,7 +7,7 @@ import features.Conditon;
 public class Core {
     Set<String> set = new HashSet<String>();
 
-    String extract(String s) {
+     String  extract(String s) {
         int k = 1;
         String sfinal = "";
         for (int i = 1; i < s.length(); i++) {
@@ -27,12 +27,13 @@ public class Core {
 
     }
 
-    public void command(String data) {
+    public   void command(String data) {
+     //   System.out.println("@@@@-->"+data);
         set.add("elaan");
         set.add("agartummiljao");
         set.add("warna");
 
-        System.out.println(data);
+     //   System.out.println(data);
         String keyword = "";
         String data2;
         int indd;
@@ -58,12 +59,12 @@ public class Core {
                     String data1 = data2.substring(1, length - 1);
                     // System.out.println(data1+"%%%");
                     PrintInfo.print(data1);
-                    System.out.println(data1);
+                 //   System.out.println(data1);
                     i++;
 
                 }
                 if (keyword.charAt(0) == 'a') {
-                    data2 += keyword + '(';
+                    data2 += keyword ;
                     while (data.charAt(i) != ')') {
                         data2 += data.charAt(i);
                         i++;
@@ -96,8 +97,10 @@ public class Core {
                             data2 += '}';
                         }
                     }
-                    System.out.println(data2 + " $$$");
-                    System.out.println(i+" "+data.length());
+                  //  System.out.println(data2 + " $$$");
+                  Coreif cf=new Coreif();
+                    cf.process(data2);
+                 //   System.out.println(i+" "+data.length());
 
                 }
 
