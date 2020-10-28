@@ -1,4 +1,4 @@
-package filehandling;
+//package filehandling;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,8 +17,14 @@ public class Input {
             while (myReader.hasNextLine()) {
 
                 data = myReader.nextLine();
-                data.trim();
-                code = code + data;
+
+              //  System.out.println("###"+data);
+                String data1=data.trim();
+                code = code + data1;
+
+              //  data.trim();
+               // code = code + data;
+
 
             }
             myReader.close();
