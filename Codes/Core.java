@@ -2,10 +2,30 @@ package filehandling;
 
 import java.util.*;
 import features.Conditon;
-import filehandling.Precore;
+//import filehandling.Precore;
 
 public class Core {
     Set<String> set = new HashSet<String>();
+
+    String extract(String s) {
+        int k = 1;
+        String sfinal = "";
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) == '{')
+                k++;
+            else if (s.charAt(i) == '}')
+                k--;
+
+            if (k == 0)
+                return sfinal;
+            else
+                sfinal = sfinal + s.charAt(i);
+
+        }
+
+        return sfinal;
+
+    }
 
     public void command(String data) {
         set.add("elaan");
@@ -20,7 +40,7 @@ public class Core {
         for (int i = 0; i < data.length();) {
 
             keyword = "";
-            while (data.charAt(i) != '(') {
+            while (i < data.length() && data.charAt(i) != '(') {
                 keyword += data.charAt(i);
                 i++;
 
@@ -48,37 +68,36 @@ public class Core {
                     }
                     data2 += ')';
                     i++;
-                    data2+='{';
+                    data2 += '{';
                     String str2 = data.substring(i);
-                    int len2 = Precore.extract(str2).length();
-                    data2 += Precore.extract(str2);
-                    i += len2;
-                    data2+='}';
+                    int len2 = extract(str2).length();
+                    data2 += extract(str2);
+                    i += len2 + 2;
+                    data2 += '}';
+                    if (i < data.length() && data.charAt(i) == 'w') {
 
-                    keyword = "";
-                    while (data.charAt(i) != '(') {
-                        keyword += data.charAt(i);
-                        i++;
-
-                    }
-                    if (set.contains(keyword)) {
-                        data2 += keyword + '(';
-                        while (data.charAt(i) != ')') {
-                            data2 += data.charAt(i);
+                        keyword = "";
+                        while (i < data.length() && data.charAt(i) != '{') {
+                            keyword += data.charAt(i);
                             i++;
+
                         }
-                        data2 += ')';
-                        i++;
-                        data2+='{';
-                        str2 = data.substring(i);
-                        len2 = Precore.extract(str2).length();
-                        data2 += Precore.extract(str2);
-                        i += len2;
-                        data2+='}';
+                        System.out.println(keyword + "^");
+                        if (set.contains(keyword)) {
+                            data2 += keyword;
+
+                            data2 += '{';
+                            str2 = data.substring(i);
+                            len2 = extract(str2).length();
+                            data2 += extract(str2);
+                            i += len2;
+                            data2 += '}';
+                        }
                     }
+                    System.out.println(data2 + " $$$");
 
                 }
-                
+
             }
             i++;
 

@@ -17,6 +17,7 @@ public class Input {
             while (myReader.hasNextLine()) {
 
                 data = myReader.nextLine();
+                data.trim();
                 code = code + data;
 
             }
