@@ -1,7 +1,7 @@
 //package filehandling;
 
 import java.util.*;
-import features.Conditon;
+//import features.Conditon;
 //import filehandling.Precore;
 
 public class Core {
