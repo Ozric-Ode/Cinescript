@@ -45,6 +45,7 @@ public class Core {
                 i++;
 
             }
+            //System.out.println(keyword + "!");
             data2 = "";
             if (set.contains(keyword)) {
                 if (keyword.charAt(0) == 'e') {
@@ -56,8 +57,9 @@ public class Core {
                     int length = data2.length();
                     String data1 = data2.substring(1, length - 1);
                     // System.out.println(data1+"%%%");
-                    // PrintInfo.print(data1);
+                    PrintInfo.print(data1);
                     System.out.println(data1);
+                    i++;
 
                 }
                 if (keyword.charAt(0) == 'a') {
@@ -82,7 +84,7 @@ public class Core {
                             i++;
 
                         }
-                        System.out.println(keyword + "^");
+                        //System.out.println(keyword + "^");
                         if (set.contains(keyword)) {
                             data2 += keyword;
 
@@ -90,16 +92,18 @@ public class Core {
                             str2 = data.substring(i);
                             len2 = extract(str2).length();
                             data2 += extract(str2);
-                            i += len2;
+                            i += len2+2;
                             data2 += '}';
                         }
                     }
                     System.out.println(data2 + " $$$");
+                    System.out.println(i+" "+data.length());
 
                 }
 
             }
-            i++;
+            //System.out.println(i+" "+data.length());
+           
 
         }
 
