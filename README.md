@@ -13,6 +13,8 @@
 #### true - satyamevjayate
 #### false - herapheri
 
+<br> 
+
 ## To Run:running:/Test:memo: the code:
 
 <ol>
@@ -22,7 +24,7 @@
   cd CodeBusta-Language/Codes/
   ```
   
- <li> Run the followind command for all the files to update/build the classes</li>
+ <li> Run the followind commands(in the same order) for all the files to update/build the classes</li>
   
   ```
   javac -d . .\Evaluator.java
