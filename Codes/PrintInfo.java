@@ -8,6 +8,7 @@ import features.*;
 
 class PrintInfo {
     public static void print(String s) {
+		System.out.println(s+"###");
         
         //, ====> Concatenation
 		//" " ===> String in print function
