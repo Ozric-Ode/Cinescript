@@ -8,6 +8,7 @@ import features.*;
 
 class PrintInfo {
     public static void print(String s) {
+		System.out.println(s+"###");
         
         //, ====> Concatenation
 		//" " ===> String in print function
@@ -58,8 +59,8 @@ class PrintInfo {
 			s_final=s_final+Evaluator.evaluate(s_exp);
 			s_exp="";
         try {
-            FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt");
-            writer.write(s_final);
+            FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt",true);
+            writer.write(s_final+"\n");
             writer.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
