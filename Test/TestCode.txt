@@ -1,1 +1,20 @@
-elaan("This is our first code" , ( 2 + 2 ) , "equals", 4);
+elaan("This is our first code");
+
+
+elaan("This is our second code "," equals ");
+
+
+
+
+agartummiljao( 112<=31 ){
+elaan("Hello");
+}
+warna{
+elaan("Bye");
+}
+
+elaan("This is our first code "," equals ");
+
+agartummiljao(31<311){
+elaan("ji");
+}

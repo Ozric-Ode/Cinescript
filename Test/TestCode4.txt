@@ -7,3 +7,18 @@ welse{
 if(31<311){
 	elaan("ji");
 }
+
+
+warna{
+elaan("Bye");
+}
+agartummiljao(31<311){
+elaan("ji");
+}
+
+agartummiljao( 112<=31 ){
+elaan("Hello");
+}
+warna{
+elaan("Bye");
+}
