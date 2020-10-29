@@ -26,6 +26,7 @@
  <li> Run the followind commands(in the same order) for all the files to update/build the classes</li>
   
   ```
+  javac -d . .\Precore.java
   javac -d . .\Evaluator.java
   javac -d . .\Conditon.java
   javac -d . .\PrintInfo.java
@@ -33,6 +34,16 @@
   javac -d . .\Core.java
   javac -d . .\Input.java  
   ```
+  ## OR
+  <li> Run ontime.bat file directly</li>
+  ```
+  ontime.bat
+  ```
+  <li>(in command prompt)</li>
+  ```
+  ./ontime.bat
+  ```
+  <li>(in powershell)</li>
   
 
   <li> To change input the test code file, change the name of input file in <a href=https://github.com/Ozric-Ode/CodeBusta-Language/blob/master/Codes/Input.java>Input.java</a> </li>
@@ -46,7 +57,7 @@
 
 
 
-## Made with :blue_heart:
+## Made with :red_heart:
 ### Java
 
 
