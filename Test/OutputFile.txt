@@ -1,2 +1,3 @@
-Bye
-ji
+This is our first code
+This is our second code  equals 
+This is our first code  equals 

@@ -17,14 +17,9 @@ public class Input {
             while (myReader.hasNextLine()) {
 
                 data = myReader.nextLine();
-
-              //  System.out.println("###"+data);
-                String data1=data.trim();
+                // System.out.println("###"+data);
+                String data1 = data.trim();
                 code = code + data1;
-
-              //  data.trim();
-               // code = code + data;
-
 
             }
             myReader.close();
