@@ -17,10 +17,11 @@ public class Input {
             while (myReader.hasNextLine()) {
 
                 data = myReader.nextLine();
-                // System.out.println("###"+data);
-                String data1 = data.trim();
-                code = code + data1;
 
+
+              //  System.out.println("###"+data);
+                String data1=data.trim();
+                code = code + data1;
             }
             myReader.close();
             core.command(code);
