@@ -30,7 +30,7 @@
   ```
 </ol>
 
-  <h2 align="center">OR</h3>
+  <h2 align="center">OR</h2>
   
 <ol>  
   <li> Run ontime.bat file directly:fire:</li>
