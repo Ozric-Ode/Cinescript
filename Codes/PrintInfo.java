@@ -1,4 +1,4 @@
-//package filehandling;
+package filehandling;
 
 import java.util.*;
 import java.io.FileWriter; // Import the FileWriter class

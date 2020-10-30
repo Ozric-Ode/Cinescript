@@ -34,23 +34,31 @@
   javac -d . .\Core.java
   javac -d . .\Input.java  
   ```
+</ol>
+
   # OR
-  <li> Run ontime.bat file directly</li>
+  
+<ol>  
+  <li> Run ontime.bat file directly:fire:</li>
+
   ```
-  ontime.bat
+  onetime.bat                     (in command prompt)
   ```
-  (in command prompt)
+
+  
+
   ```
-  ./ontime.bat
+  ./onetime.bat                   (in powershell)
   ```
-  (in powershell)
+
+  
   
 
   <li> To change input the test code file, change the name of input file in <a href=https://github.com/Ozric-Ode/CodeBusta-Language/blob/master/Codes/Input.java>Input.java</a> </li>
   <li>Finally, after setting the required input file and updating class files, run </li>
   
   ```
-  java Input.java
+  java filehandling.Input
   ```
 
 </ol>
@@ -59,6 +67,3 @@
 
 ## Made with :red_heart:
 ### Java
-
-
-

@@ -1,3 +1,6 @@
+package filehandling;
+
+import features.*;
 import java.util.Scanner;
 
 public class Coreif {

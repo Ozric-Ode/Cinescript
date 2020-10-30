@@ -10,9 +10,9 @@ javac -d . .\Conditon.java
 javac -d . .\PrintInfo.java
 javac -d . .\Coreif.java
 javac -d . .\Core.java
-java Input.java)
+java filehandling.Input)
 if %choice%==r (
-java Input.java)
+java filehandling.Input)
 ECHO =================================================================
 ECHO OutputFile.txt is generated successfully ;) .
 PAUSE
