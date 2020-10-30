@@ -1,4 +1,4 @@
-//package filehandling;
+package filehandling;
 public class Precore {
     public static String extract(String s) {
         int k = 1;

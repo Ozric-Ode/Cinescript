@@ -1,8 +1,7 @@
-//package filehandling;
+package filehandling;
 
 import java.util.*;
-//import features.Conditon;
-//import filehandling.Precore;
+import features.*;
 
 public class Core {
     Set<String> set = new HashSet<String>();
