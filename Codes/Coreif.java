@@ -2,6 +2,7 @@ package features;
 
 import java.util.Scanner;
 import filehandling.*;
+import services.*;
 
 public class Coreif {
     public boolean extract_condition(String s)
