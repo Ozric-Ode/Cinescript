@@ -1,6 +1,5 @@
 package features;
 
-import java.util.Scanner;
 import filehandling.*;
 import services.*;
 
@@ -30,7 +29,7 @@ public class Coreif {
         k=0;
         boolean cnd=false;
   //      System.out.println(sfinal);
-        cnd=Conditon.checkCondition(sfinal);
+        cnd=Condition.checkCondition(sfinal);
         return cnd;
     }
 
@@ -49,7 +48,7 @@ public class Coreif {
         String sdata2=Precore.extract(data.substring(ind));
 
         Core cr=new Core();
-       // System.out.println("the condition is "+cnd);
+       System.out.println("the condition is "+cnd);
         if(cnd)
         {
           

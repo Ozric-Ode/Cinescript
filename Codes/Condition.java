@@ -1,7 +1,7 @@
 package features;
 
 
-public class Conditon extends Exception{
+public class Condition extends Exception{
 	public static boolean checkCondition(String data){
 		String var1="";
 		String symbol="";

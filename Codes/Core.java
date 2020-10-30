@@ -32,7 +32,7 @@ public class Core {
         set.add("agartummiljao");
         set.add("warna");
 
-     //   System.out.println(data);
+    //    System.out.println(data);
         String keyword = "";
         String data2;
         int indd;
@@ -122,7 +122,7 @@ public class Core {
         // length--;
         // }
         // String data1=data.substring(3, length);
-        // Conditon con=new Conditon();
+        // Condition con=new Condition();
         // return con.checkCondition(data1.trim());
         // }
         // return false;
