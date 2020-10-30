@@ -1,5 +1,6 @@
 package services;
 public class Precore {
+    static int scope=0;
     public static String extract(String s) {
         int k = 1;
         String sfinal = "";
@@ -10,7 +11,10 @@ public class Precore {
                 k--;
 
             if (k == 0)
+            {
+                scope++;
                 return sfinal;
+            }
             else
                 sfinal = sfinal + s.charAt(i);
 
