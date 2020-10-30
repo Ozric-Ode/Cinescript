@@ -11,7 +11,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-            File myObj = new File("..\\Test\\TestCode3.txt");
+            File myObj = new File("..\\Test\\TestCode.txt");
             Scanner myReader = new Scanner(myObj);
             boolean isBracketed = false, isIf = false;
             boolean result = false;
@@ -20,13 +20,14 @@ public class Input {
             while (myReader.hasNextLine()) {
 
                 data = myReader.nextLine();
-                // System.out.println("###"+data);
+                //  System.out.println("###"+data);
                 String data1 = data.trim();
                 code = code + data1;
 
             }
             myReader.close();
-            code = Precore.extract(code);
+            // System.out.println(code);
+         //   String ccode = Precore.extract(code);
             core.command(code);
 
         } catch (FileNotFoundException e) {
