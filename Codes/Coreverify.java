@@ -1,0 +1,77 @@
+package Codes;
+
+import java.util.*;
+import java.util.regex.*;
+import datatypes.Corescope;
+
+
+
+public class Coreverify {
+
+    public static boolean onlyDigits(String str) {
+        // Regex to check string
+        // contains only digits
+        String regex = "[0-9]+";
+
+        // Compile the ReGex
+        Pattern p = Pattern.compile(regex);
+
+        // If the string is empty
+        // return false
+        if (str == null) {
+            return false;
+        }
+
+        // Find match between given string
+        // and regular expression
+        // using Pattern.matcher()
+        Matcher m = p.matcher(str);
+
+        // Return if the string
+        // matched the ReGex
+        return m.matches();
+    }
+
+    Map<String, Integer> hm = new HashMap<String, Integer>();
+    // Stack<String> scopevariable = new Stack<String>();
+    Set<String> set = new HashSet<String>();
+
+    public void verify(String data) {
+        data = data.trim();
+        data += " ";
+        // scopevariable.push("a");
+        // StackLeaOp.push("b");
+        hm.put("a", 10);
+        hm.put("b", 20);
+        set.add("<");
+        set.add(">");
+        set.add("<=");
+        set.add(">=");
+        set.add("==");
+        set.add("!=");
+        String newdata = "";
+
+        for (int i = 0; i < data.length();) {
+            String word = "";
+            while (data.charAt(i) != ' ') {
+                word += data.charAt(i);
+                i++;
+            }
+            if (!onlyDigits(word) && !set.contains(word)) {
+
+                if (Corescope.scope_variables.contains(word)) {
+                    newdata += hm.get(word) + " ";
+                } else {
+                    System.out.print("Variable Not found");
+                }
+            } else {
+                newdata += word + " ";
+
+            }
+
+        }
+        newdata=" "+newdata;
+
+    }
+
+}

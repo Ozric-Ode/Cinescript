@@ -2,29 +2,31 @@ package services;
 
 import java.util.*;
 import features.*;
+import datatypes.Corescope;
+
 
 public class Core {
     Set<String> set = new HashSet<String>();
 
-     String  extract(String s) {
-        int k = 1;
-        String sfinal = "";
-        for (int i = 1; i < s.length(); i++) {
-            if (s.charAt(i) == '{')
-                k++;
-            else if (s.charAt(i) == '}')
-                k--;
+    //  String  Precore.extract(String s) {
+    //     int k = 1;
+    //     String sfinal = "";
+    //     for (int i = 1; i < s.length(); i++) {
+    //         if (s.charAt(i) == '{')
+    //             k++;
+    //         else if (s.charAt(i) == '}')
+    //             k--;
 
-            if (k == 0)
-                return sfinal;
-            else
-                sfinal = sfinal + s.charAt(i);
+    //         if (k == 0)
+    //             return sfinal;
+    //         else
+    //             sfinal = sfinal + s.charAt(i);
 
-        }
+    //     }
 
-        return sfinal;
+    //     return sfinal;
 
-    }
+    // }
 
     public   void command(String data) {
      //   System.out.println("@@@@-->"+data);
@@ -32,7 +34,7 @@ public class Core {
         set.add("agartummiljao");
         set.add("warna");
 
-    //    System.out.println(data);
+     //   System.out.println(data);
         String keyword = "";
         String data2;
         int indd;
@@ -72,8 +74,9 @@ public class Core {
                     i++;
                     data2 += '{';
                     String str2 = data.substring(i);
-                    int len2 = extract(str2).length();
-                    data2 += extract(str2);
+                    String ext_str2=Precore.extract(str2);
+                    int len2 = ext_str2.length();
+                    data2 += ext_str2;
                     i += len2 + 2;
                     data2 += '}';
                     if (i < data.length() && data.charAt(i) == 'w') {
@@ -90,15 +93,21 @@ public class Core {
 
                             data2 += '{';
                             str2 = data.substring(i);
-                            len2 = extract(str2).length();
-                            data2 += extract(str2);
+                            String ext_str=Precore.extract(str2);
+                            len2 = ext_str.length();
+                            data2 += ext_str;
                             i += len2+2;
                             data2 += '}';
                         }
                     }
                   //  System.out.println(data2 + " $$$");
+                  Precore.scope=Precore.scope-2;
                   Coreif cf=new Coreif();
+                  Corescope cs=new Corescope();
                     cf.process(data2);
+                    cs.Removescope();
+                    Precore.scope--;
+                   
                  //   System.out.println(i+" "+data.length());
 
                 }
@@ -122,7 +131,7 @@ public class Core {
         // length--;
         // }
         // String data1=data.substring(3, length);
-        // Condition con=new Condition();
+        // Conditon con=new Conditon();
         // return con.checkCondition(data1.trim());
         // }
         // return false;
