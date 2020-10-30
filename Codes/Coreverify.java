@@ -1,4 +1,4 @@
-package Codes;
+package Datatypes;
 
 import java.util.*;
 import java.util.regex.*;
