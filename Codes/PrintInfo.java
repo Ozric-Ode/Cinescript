@@ -1,4 +1,4 @@
-package filehandling;
+package features;
 
 import java.util.*;
 import java.io.FileWriter; // Import the FileWriter class
@@ -6,7 +6,7 @@ import java.io.IOException; // Import the IOException class to handle errors
 
 import features.*;
 
-class PrintInfo {
+public class PrintInfo {
     public static void print(String s) {
 		System.out.println(s+"###");
         
