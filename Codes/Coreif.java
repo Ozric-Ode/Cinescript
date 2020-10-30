@@ -48,6 +48,8 @@ public class Coreif {
 
         String sdata2=Precore.extract(data.substring(ind));
 
+        Precore.scope--;
+
         Core cr=new Core();
         Corescope cs=new Corescope();
        System.out.println("the condition is "+cnd);
