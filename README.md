@@ -65,5 +65,5 @@
 
 
 
-## Made with :red_heart:
+## Made with :heart:
 ### Java
