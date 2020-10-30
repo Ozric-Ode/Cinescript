@@ -101,7 +101,9 @@ public class Core {
                   //  System.out.println(data2 + " $$$");
                   Precore.scope=Precore.scope-2;
                   Coreif cf=new Coreif();
+                  Corescope cs=new Corescope();
                     cf.process(data2);
+                    cs.Removescope();
                     Precore.scope--;
                    
                  //   System.out.println(i+" "+data.length());

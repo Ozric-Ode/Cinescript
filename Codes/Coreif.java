@@ -48,14 +48,16 @@ public class Coreif {
         String sdata2=Precore.extract(data.substring(ind));
 
         Core cr=new Core();
+        Corescope cs=new Corescope();
        System.out.println("the condition is "+cnd);
         if(cnd)
         {
-          
+            cs.Enterscope('0');
             cr.command(sdata);
         }
         else
         {
+            cs.Enterscope('0');
          cr.command(sdata2);
         }
 
