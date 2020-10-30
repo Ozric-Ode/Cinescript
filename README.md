@@ -23,20 +23,14 @@
   cd CodeBusta-Language/Codes/
   ```
   
- <li> Run the followind commands(in the same order) for all the files to update/build the classes</li>
+ <li> Run the following command(in the same order) for all the files to update/build the classes(Now only 1 command :dancer: :dancers: :dancer:)</li>
   
   ```
-  javac -d . .\Precore.java
-  javac -d . .\Evaluator.java
-  javac -d . .\Conditon.java
-  javac -d . .\PrintInfo.java
-  javac -d . .\Coreif.java
-  javac -d . .\Core.java
-  javac -d . .\Input.java  
+  javac -d . *.java  
   ```
 </ol>
 
-  # OR
+  <h2 align="center">OR</h3>
   
 <ol>  
   <li> Run ontime.bat file directly:fire:</li>
