@@ -1,7 +1,7 @@
-package filehandling;
+package features;
 
-import features.*;
 import java.util.Scanner;
+import filehandling.*;
 
 public class Coreif {
     public boolean extract_condition(String s)

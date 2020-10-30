@@ -10,6 +10,7 @@ javac -d . .\Conditon.java
 javac -d . .\PrintInfo.java
 javac -d . .\Coreif.java
 javac -d . .\Core.java
+javac -d . .\Input.java
 java filehandling.Input)
 if %choice%==r (
 java filehandling.Input)
