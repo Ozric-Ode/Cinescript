@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-import services.Core;
+//import services.Core;
+import services.*;
 
 public class Input {
     public static void main(String[] args) {
@@ -25,6 +26,7 @@ public class Input {
 
             }
             myReader.close();
+            code = Precore.extract(code);
             core.command(code);
 
         } catch (FileNotFoundException e) {
