@@ -2,15 +2,16 @@ package services;
 
 import java.util.*;
 import features.*;
-import datatypes.Corescope;
+import datatypes.*;
 
 public class Core {
     Set<String> set = new HashSet<String>();
     Set<Character> deli = new HashSet<Character>();
 
     public void command(String data) {
+        Coredeclare cdl = new Coredeclare();
         data = data.trim();
-         System.out.println("@@@@-->"+data);
+        System.out.println("@@@@-->" + data);
         set.add("elaan");
         set.add("agartummiljao");
         set.add("warna");
@@ -29,12 +30,11 @@ public class Core {
 
             keyword = "";
             idd3 = i;
-            
+
             while (i < data.length() && !deli.contains(data.charAt(i))) {
                 keyword += data.charAt(i);
-                //System.out.println(deli.contains(data.charAt(i))+"#"+data.charAt(i));
+                // System.out.println(deli.contains(data.charAt(i))+"#"+data.charAt(i));
                 i++;
-                
 
             }
             System.out.println(keyword + "!");
@@ -117,18 +117,30 @@ public class Core {
                         data3 += data.charAt(i);
                         i++;
                     }
-                    data3 +=";";
+                    data3 += ";";
                     i++;
-                    System.out.println(data3+"@@@@");
+                    System.out.println(data3 + "@@@@");
+                    cdl.declare(data3);
 
                 }
+
+            } else {
+                String data3 = "";
+                data3 += keyword;
+                while (data.charAt(i) != ';') {
+                    data3 += data.charAt(i);
+                    i++;
+                }
+                data3 += ";";
+                i++;
+                System.out.println(data3 + "$$$$");
+               Coreassign.coreassign(data3);
 
             }
             // System.out.println(i+" "+data.length());
 
         }
 
-       
     }
 
 }
