@@ -19,7 +19,7 @@ public class Coredeclare {
         String assign;
         int ind;
         int flag=0;
-        dec.trim();
+        dec=dec.trim();
         if(dec.contains("=")) {
             flag=1;
         }
