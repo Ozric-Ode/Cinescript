@@ -75,6 +75,8 @@ public class Core {
                     data2 += '{';
                     String str2 = data.substring(i);
                     String ext_str2=Precore.extract(str2);
+                    Precore.scope=Precore.scope-1;
+                    /////////////////////////
                     int len2 = ext_str2.length();
                     data2 += ext_str2;
                     i += len2 + 2;
@@ -94,6 +96,9 @@ public class Core {
                             data2 += '{';
                             str2 = data.substring(i);
                             String ext_str=Precore.extract(str2);
+                            Precore.scope=Precore.scope-1;
+
+                            ///////////////////
                             len2 = ext_str.length();
                             data2 += ext_str;
                             i += len2+2;
@@ -101,13 +106,18 @@ public class Core {
                         }
                     }
                   //  System.out.println(data2 + " $$$");
-                  Precore.scope=Precore.scope-2;
+                
                   Coreif cf=new Coreif();
                   Corescope cs=new Corescope();
+                  int previous=Precore.scope;
                     cf.process(data2);
+                     System.out.println("the currscope is"+Precore.scope);
+
+                    if(previous!=Precore.scope)
+                    {
                     cs.Removescope();
                     Precore.scope--;
-                   
+                    }
                  //   System.out.println(i+" "+data.length());
 
                 }

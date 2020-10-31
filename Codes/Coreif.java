@@ -42,27 +42,36 @@ public class Coreif {
         for(int i=0;i<data.length();i++) {if(data.charAt(i)=='{'){ind=i;break;}}
 
         String sdata=Precore.extract(data.substring(ind));
+        Precore.scope--;
         int ind2=ind+sdata.length()+1;
 
-        for(int i=ind2;i<data.length();i++) {if(data.charAt(i)=='{'){ind=i;break;}}
-
-        String sdata2=Precore.extract(data.substring(ind));
-
-        Precore.scope--;
-
+       
         Core cr=new Core();
         Corescope cs=new Corescope();
-       System.out.println("the condition is "+cnd);
+       System.out.println("the condition is "+cnd+"scoppp=="+Precore.scope);
+       System.out.println("THE ind2"+ind2+" "+data.length());
         if(cnd)
         {
+            Precore.scope++;
             cs.Enterscope('0');
             cr.command(sdata);
         }
-        else
-        {
+      
+        
+            else if(ind2+1<data.length())
+            {
+            for(int i=ind2;i<data.length();i++) {if(data.charAt(i)=='{'){ind=i;break;}}
+    
+            String sdata2=Precore.extract(data.substring(ind));
+    
+         //   Precore.scope--;
+            
+    
+           // Precore.scope++;
             cs.Enterscope('0');
          cr.command(sdata2);
-        }
+            }
+        
 
     }    
 }

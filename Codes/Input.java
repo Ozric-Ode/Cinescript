@@ -27,13 +27,13 @@ public class Input {
 
             }
             myReader.close();
-            // System.out.println(code);
-            String ccode = Precore.extract(code);
-            Corescope cs=new Corescope();
-            cs.Enterscope('0');
-            core.command(ccode);
-            cs.Removescope();
-            
+             System.out.println(code);
+            //String ccode = Precore.extract(code);
+            //Corescope cs=new Corescope();
+          //  cs.Enterscope('0');
+            core.command(code);
+        //    cs.Removescope();
+          //  
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occured.");
