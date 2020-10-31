@@ -63,7 +63,7 @@ public class Coreverify {
                     
                     newdata += Coredeclare.inttype_map.get(word) + " ";
                 } else {
-                    System.out.print("Variable Not found");
+                    System.out.println("Variable Not found "+word);
                 }
             } else {
                 newdata += word + " ";

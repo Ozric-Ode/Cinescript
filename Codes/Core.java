@@ -9,6 +9,8 @@ public class Core {
     Set<Character> deli = new HashSet<Character>();
 
     public void command(String data) {
+        System.out.println("the startscope is" + Precore.scope);
+
         Coredeclare cdl = new Coredeclare();
         data = data.trim();
         System.out.println("@@@@-->" + data);
@@ -27,6 +29,7 @@ public class Core {
         int idd3;
         System.out.println(data.length());
         for (int i = 0; i < data.length();) {
+            System.out.println("@^^@-->" + data);
 
             keyword = "";
             idd3 = i;
@@ -93,20 +96,22 @@ public class Core {
                             data2 += ext_str;
                             i += len2 + 2;
                             data2 += '}';
+                            i++;
                         }
                     }
-                    // System.out.println(data2 + " $$$");
+                    System.out.println(data2 + " $!$");
 
                     Coreif cf = new Coreif();
                     Corescope cs = new Corescope();
                     int previous = Precore.scope;
                     cf.process(data2);
-                    System.out.println("the currscope is" + Precore.scope);
+                    
 
                     if (previous != Precore.scope) {
                         cs.Removescope();
                         Precore.scope--;
                     }
+                    System.out.println("the currscope is" + Precore.scope);
                     // System.out.println(i+" "+data.length());
 
                 }
@@ -140,6 +145,8 @@ public class Core {
             // System.out.println(i+" "+data.length());
 
         }
+        System.out.println("the endscope is" + Precore.scope);
+
 
     }
 

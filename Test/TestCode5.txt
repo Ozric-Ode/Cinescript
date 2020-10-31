@@ -1,1 +1,9 @@
 ekdoteen a = 5;
+  agartummiljao( 10 > 100 )
+    {
+         elaan("10");
+    }
+    warna
+   {
+     elaan("100");
+   }

@@ -1,28 +1,11 @@
-ekdoteen a=10;
-ekdoteen b=2;
-if( a > b)
+agartummiljao( 10 > 2)
 {
-    ekdoteen c=20;
-    if(c > a)
-    {
-        elaan("hiii");
-         ekdoteen d=200;
-         if(d < b)
-         {
-             elaan("hello");
-         }
-         if(d > b)
-         {
-             elaan("byeee");
-         }
-         else
-         {
-             elaan("faaltu");
-         }
-
-    }
-    else
-    {
-        elaan("ggg");
-    }
+    elaan("10");
+  
 }
+
+warna
+{
+     elaan("2");
+}
+elaan("2000");
