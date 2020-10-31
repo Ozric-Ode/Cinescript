@@ -12,11 +12,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-<<<<<<< HEAD
-            File myObj = new File("..\\Test\\TestCode2.txt");
-=======
             File myObj = new File("..\\Test\\TestCode.txt");
->>>>>>> 80ba2caf6b6c9d5a60bbf0ed70dc1ad3be581826
             Scanner myReader = new Scanner(myObj);
             boolean isBracketed = false, isIf = false;
             boolean result = false;
