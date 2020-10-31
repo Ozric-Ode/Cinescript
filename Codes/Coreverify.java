@@ -30,17 +30,18 @@ public class Coreverify {
         return m.matches();
     }
 
-  //  Map<String, Integer> hm = new HashMap<String, Integer>();
+    // Map<String, Integer> hm = new HashMap<String, Integer>();
     // Stack<String> scopevariable = new Stack<String>();
     Set<String> set = new HashSet<String>();
 
     public String verify(String data) {
         data = data.trim();
+        System.out.println(data + " %%");
         data += " ";
         // scopevariable.push("a");
         // StackLeaOp.push("b");
-     //   hm.put("a", 10);
-       // hm.put("b", 20);
+        // hm.put("a", 10);
+        // hm.put("b", 20);
         set.add("<");
         set.add(">");
         set.add("<=");
@@ -49,15 +50,17 @@ public class Coreverify {
         set.add("!=");
         String newdata = "";
 
-        for (int i = 0; i < data.length();i++) {
+        for (int i = 0; i < data.length(); i++) {
             String word = "";
             while (data.charAt(i) != ' ') {
                 word += data.charAt(i);
                 i++;
             }
-            if (!onlyDigits(word) && !set.contains(word)) {
 
+            if (!onlyDigits(word) && !set.contains(word)) {
+                System.out.println(word + " *");
                 if (Corescope.scope_variables.contains(word)) {
+                    
                     newdata += Coredeclare.inttype_map.get(word) + " ";
                 } else {
                     System.out.print("Variable Not found");
