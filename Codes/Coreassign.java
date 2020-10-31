@@ -1,4 +1,4 @@
-package Datatypes;
+package datatypes;
 
 import java.util.*;
 
@@ -28,12 +28,18 @@ public class Coreassign {
 		//assuming map of ints name to be intmap
 		var=var.trim();
 		expression=expression.trim();
+		
 		if(Coredeclare.intmap.containsKey(var)==true){
-			int result=Evaluator.evaluate(expression);
-			Coredeclare.intmap.replace(var, result); 
+			if(Corescope.scope_variables.contains(var)==true){
+				int result=Evaluator.evaluate(expression);
+				Coredeclare.intmap.replace(var, result); 
+			}
+			else{
+				//throw error of scope
+			}
 		}
 		else{
-			//throw error
+			//throw error of non-availability of variable
 		}
 
 	}
