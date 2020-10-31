@@ -12,8 +12,6 @@ public class Input {
         try {
             File myObj = new File("..\\Test\\TestCode3.txt");
             Scanner myReader = new Scanner(myObj);
-            boolean isBracketed = false, isIf = false;
-            boolean result = false;
             String data;
             String code = "";
             while (myReader.hasNextLine()) {

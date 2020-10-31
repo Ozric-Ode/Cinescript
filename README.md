@@ -23,17 +23,16 @@
   cd CodeBusta-Language/Codes/
   ```
   
- <li> Run the following command(in the same order) for all the files to update/build the classes(Now only 1 command :dancer: :dancers: :dancer:)</li>
+ <li> Run the following command(in the same order) for all the files to update/build the classes(Now only 1 command :dancer: :dancers: :dancer:)
   
   ```
   javac -d . *.java  
   ```
-</ol>
 
-  <h2 align="center">OR</h2>
+  <h3 align="center">OR</h3>
   
-<ol>  
-  <li> Run ontime.bat file directly:fire:</li>
+ 
+ Run ontime.bat file directly:fire:
 
   ```
   onetime.bat                     (in command prompt)
@@ -46,7 +45,7 @@
   ```
 
   
-  
+  </li>
 
   <li> To change input the test code file, change the name of input file in <a href=https://github.com/Ozric-Ode/CodeBusta-Language/blob/master/Codes/Input.java>Input.java</a> </li>
   <li>Finally, after setting the required input file and updating class files, run </li>
