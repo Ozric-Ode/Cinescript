@@ -29,10 +29,10 @@ public class Coreassign {
 		var=var.trim();
 		expression=expression.trim();
 		
-		if(Coredeclare.intmap.containsKey(var)==true){
+		if(Coredeclare.inttype_map.containsKey(var)==true){
 			if(Corescope.scope_variables.contains(var)==true){
 				int result=Evaluator.evaluate(expression);
-				Coredeclare.intmap.replace(var, result); 
+				Coredeclare.inttype_map.replace(var, result); 
 			}
 			else{
 				//throw error of scope
