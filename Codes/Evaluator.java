@@ -7,6 +7,8 @@ public class Evaluator
 { 
 	public static int evaluate(String expression) 
 	{ 
+		Coreverify cv=new Coreverify();
+		expression = cv.verify(expression);
 		// String expression="";
 		// for(int i=0;i<expression1.length();i++)
 		// expression=expression+" "+expression1.charAt(i);
