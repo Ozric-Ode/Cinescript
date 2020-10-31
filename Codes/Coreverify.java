@@ -1,10 +1,8 @@
-package Datatypes;
+package datatypes;
 
 import java.util.*;
 import java.util.regex.*;
 import datatypes.Corescope;
-
-
 
 public class Coreverify {
 
@@ -36,7 +34,7 @@ public class Coreverify {
     // Stack<String> scopevariable = new Stack<String>();
     Set<String> set = new HashSet<String>();
 
-    public void verify(String data) {
+    public String verify(String data) {
         data = data.trim();
         data += " ";
         // scopevariable.push("a");
@@ -70,7 +68,8 @@ public class Coreverify {
             }
 
         }
-        newdata=" "+newdata;
+        newdata = " " + newdata;
+        return newdata;
 
     }
 

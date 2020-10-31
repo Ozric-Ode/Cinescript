@@ -29,11 +29,16 @@ public class Corescope {
     public void Removescope()
     {
         int num = (Integer)current_scope.peek();
+        // System.out.println("nummm");
+        // System.out.println((Integer)scope_variables.peek());
+
         for(int i=0;i<num;i++)
         {
-            scope_variables.pop();
+            scope_variables.pop(); scope_stack.pop();
         }
         current_scope.pop();
+       
+
     }
 
 }
