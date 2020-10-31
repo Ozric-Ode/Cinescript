@@ -25,12 +25,12 @@ public class Input {
 
             }
             myReader.close();
-             System.out.println(code);
-            //String ccode = Precore.extract(code);
-            //Corescope cs=new Corescope();
-          //  cs.Enterscope('0');
+            // System.out.println(code);
+        //    String ccode = Precore.extract(code);
+         //   Corescope cs=new Corescope();
+        //   cs.Enterscope("0");
             core.command(code);
-        //    cs.Removescope();
+          //  cs.Removescope();
           //  
 
         } catch (FileNotFoundException e) {
