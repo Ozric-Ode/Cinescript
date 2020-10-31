@@ -35,7 +35,7 @@ public class Coreassign {
 				Coredeclare.intmap.replace(var, result); 
 			}
 			else{
-				//throw error of scope
+				throw error of scope
 			}
 		}
 		else{
