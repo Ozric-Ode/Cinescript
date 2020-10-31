@@ -53,7 +53,7 @@ public class Coreif {
         if(cnd)
         {
             Precore.scope++;
-            cs.Enterscope('0');
+            cs.Enterscope("0");
             cr.command(sdata);
         }
       
@@ -68,7 +68,7 @@ public class Coreif {
             
     
            // Precore.scope++;
-            cs.Enterscope('0');
+            cs.Enterscope("0");
          cr.command(sdata2);
             }
         
