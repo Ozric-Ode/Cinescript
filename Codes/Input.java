@@ -3,14 +3,20 @@ package filehandling;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import datatypes.*;
 
-import services.Core;
+//import services.Core;
+import services.*;
 
 public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
+<<<<<<< HEAD
             File myObj = new File("..\\Test\\TestCode2.txt");
+=======
+            File myObj = new File("..\\Test\\TestCode.txt");
+>>>>>>> 80ba2caf6b6c9d5a60bbf0ed70dc1ad3be581826
             Scanner myReader = new Scanner(myObj);
             boolean isBracketed = false, isIf = false;
             boolean result = false;
@@ -19,13 +25,19 @@ public class Input {
             while (myReader.hasNextLine()) {
 
                 data = myReader.nextLine();
-                // System.out.println("###"+data);
+                //  System.out.println("###"+data);
                 String data1 = data.trim();
                 code = code + data1;
 
             }
             myReader.close();
+            // System.out.println(code);
+        //    String ccode = Precore.extract(code);
+         //   Corescope cs=new Corescope();
+        //   cs.Enterscope("0");
             core.command(code);
+          //  cs.Removescope();
+          //  
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occured.");
