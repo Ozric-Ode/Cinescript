@@ -1,11 +1,11 @@
-{
+
 elaan("This is our first code");
 
 
 elaan("This is our second code "," equals ");
 
 
-
+ekdoteen a = 5;
 
 agartummiljao( 112<=31 ){
 elaan("Hello");
@@ -19,4 +19,4 @@ elaan("This is our first code "," equals ");
 agartummiljao(31<311){
 elaan("ji");
 }
-}
+
