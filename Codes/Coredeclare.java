@@ -8,8 +8,8 @@ public class Coredeclare {
     public void declare(String dec) {
         Set<String> dt_set = new HashSet<String>(); 
         dt_set.add("ekdoteen"); 
-        dt_set.add("lafzonmein"); 
-        Coreassign ass=new Coreassign();         
+        dt_set.add("lafzonmein");  
+        Corescope scope=new Corescope();       
         String datatype="";
         String var="";
         String assign;
@@ -34,15 +34,14 @@ public class Coredeclare {
                     i++;
                 }
                 var.trim();
-                if(flag==0){
-                    inttype_map.put(var, 0);
-                }
-                else if(flag==1) {
-                    inttype_map.put(var, 0);
-                    ass.assign(assign);
+                inttype_map.put(var, 0);
+                scope.Enterscope(var);
+                if(flag==1) {
+                    Coreassign.coreassign(assign);
                 }
                 
             }
         }   
     }
 }
+
