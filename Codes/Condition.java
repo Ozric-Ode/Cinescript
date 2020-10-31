@@ -3,6 +3,9 @@ package features;
 
 public class Condition extends Exception{
 	public static boolean checkCondition(String data){
+
+		Coreverify cv=new Coreverify();
+		data = cv.verify(data);
 		String var1="";
 		String symbol="";
 		String var2="";
