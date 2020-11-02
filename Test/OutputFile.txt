@@ -26,3 +26,9 @@ the second new value of a is70
 hii it is-->2070
 helloooo it is-->70
 byeee
+10
+the new value of a is80
+the second new value of a is70
+hii it is-->2070
+helloooo it is-->70
+byeee
