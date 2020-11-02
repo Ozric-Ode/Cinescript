@@ -5,6 +5,46 @@ import features.*;
 import datatypes.*;
 
 public class Core {
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    public static void PrintStackint(Stack<Integer> s) {
+        Stack<Integer> temp = new Stack<Integer>();
+
+        while (s.empty() == false) {
+            temp.push(s.peek());
+            s.pop();
+        }
+
+        while (temp.empty() == false) {
+            int t = temp.peek();
+            System.out.print(t + " ");
+            temp.pop();
+
+            // To restore contents of
+            // the original stack.
+            s.push(t);
+        }
+    }
+
+    public static void PrintStack(Stack<String> s) {
+        Stack<String> temp = new Stack<String>();
+
+        while (s.empty() == false) {
+            temp.push(s.peek());
+            s.pop();
+        }
+
+        while (temp.empty() == false) {
+            String t = temp.peek();
+            System.out.print(t + " ");
+            temp.pop();
+
+            // To restore contents of
+            // the original stack.
+            s.push(t);
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
     Set<String> set = new HashSet<String>();
     Set<Character> deli = new HashSet<Character>();
 
@@ -19,7 +59,7 @@ public class Core {
 
         deli.add(' ');
         deli.add('(');
-
+        deli.add(';');
         // System.out.println(data);
         String keyword = "";
         String data2;
@@ -101,12 +141,22 @@ public class Core {
                     Corescope cs = new Corescope();
                     int previous = Precore.scope;
                     cf.process(data2);
-                    System.out.println("the currscope is" + Precore.scope);
+                    PrintStack(Corescope.scope_variables);
+                    System.out.println("===========");
 
+                    PrintStackint(Corescope.current_scope);
+                    System.out.println("===========");
+                    PrintStackint(Corescope.scope_stack);
+                    System.out.println("===========");
+
+                    //////////////////////////////////////////////////////////////////////////////////////
                     if (previous != Precore.scope) {
+                        System.out.println("the removescope");
                         cs.Removescope();
                         Precore.scope--;
                     }
+                    System.out.println("the currscope is" + Precore.scope);
+
                     // System.out.println(i+" "+data.length());
 
                 }
@@ -134,7 +184,7 @@ public class Core {
                 data3 += ";";
                 i++;
                 System.out.println(data3 + "$$$$");
-               Coreassign.coreassign(data3);
+                Coreassign.coreassign(data3);
 
             }
             // System.out.println(i+" "+data.length());

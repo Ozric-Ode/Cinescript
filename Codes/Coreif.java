@@ -2,9 +2,15 @@ package features;
 
 import filehandling.*;
 import services.*;
+
+import java.util.Stack;
+
 import datatypes.Corescope;
 
 public class Coreif {
+    ////////////////////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
     public boolean extract_condition(String s)
     {
         int ind=0;
@@ -48,11 +54,12 @@ public class Coreif {
        
         Core cr=new Core();
         Corescope cs=new Corescope();
-       System.out.println("the condition is "+cnd+"scoppp=="+Precore.scope);
-       System.out.println("THE ind2"+ind2+" "+data.length());
+      
+      // System.out.println("THE ind2"+ind2+" "+data.length());
         if(cnd)
         {
             Precore.scope++;
+            System.out.println("the condition is "+cnd+"scoppp=="+Precore.scope);
             cs.Enterscope("0");
             cr.command(sdata);
         }
@@ -68,6 +75,7 @@ public class Coreif {
             
     
            // Precore.scope++;
+           System.out.println("the condition is "+cnd+"scoppp=="+Precore.scope);
             cs.Enterscope("0");
          cr.command(sdata2);
             }

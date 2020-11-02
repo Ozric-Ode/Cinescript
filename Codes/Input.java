@@ -12,7 +12,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-            File myObj = new File("..\\Test\\TestCode.txt");
+            File myObj = new File("..\\Test\\TestCode6.txt");
             Scanner myReader = new Scanner(myObj);
             boolean isBracketed = false, isIf = false;
             boolean result = false;

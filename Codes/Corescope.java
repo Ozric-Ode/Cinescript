@@ -21,7 +21,7 @@ public class Corescope {
         }
         else
         {
-            current_scope.push(Precore.scope);
+            current_scope.push(1);
         }
         scope_stack.push(Precore.scope);
     }

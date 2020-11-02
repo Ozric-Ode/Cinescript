@@ -1,27 +1,33 @@
 ekdoteen a=10;
 ekdoteen b=2;
-if( a > b)
+agartummiljao( a > b)
 {
+    elaan(a);
     ekdoteen c=20;
-    if(c > a)
+    agartummiljao(c > a)
     {
-        elaan("hiii");
+        a=80;
+        elaan("the new value of a is", a );
+        a = 70 ;
+        elaan("the second new value of a is", a );
+        elaan("hii it is-->", c , a );
+         elaan("helloooo it is-->", c + a );
          ekdoteen d=200;
-         if(d < b)
+         agartummiljao(d < b)
          {
              elaan("hello");
          }
-         if(d > b)
+         agartummiljao(d > b)
          {
              elaan("byeee");
          }
-         else
+         warna
          {
              elaan("faaltu");
          }
 
     }
-    else
+    warna
     {
         elaan("ggg");
     }
