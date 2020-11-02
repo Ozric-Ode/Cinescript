@@ -8,7 +8,7 @@ agartummiljao( a > b)
     {
         a=60;
         elaan("the new value of a is", a );
-        elaan("the new value of a is", a );
+        elaan("the second new value of a is", a );
         elaan("hii it is-->", c , a );
          elaan("helloooo it is-->", c + a );
          ekdoteen d=200;
