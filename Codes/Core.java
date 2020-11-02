@@ -6,49 +6,44 @@ import datatypes.*;
 
 public class Core {
     /////////////////////////////////////////////////////////////////////////////////////////////
-    public static void PrintStackint(Stack<Integer> s)
-    {
-      Stack<Integer> temp = new Stack<Integer>();
-       
-      while (s.empty() == false)
-      {
-        temp.push(s.peek());
-        s.pop();
-      }   
-     
-      while (temp.empty() == false)
-      {
-        int t = temp.peek();
-        System.out.print(t + " ");
-        temp.pop();
-     
-        // To restore contents of
-        // the original stack.
-        s.push(t);  
-      }
+    public static void PrintStackint(Stack<Integer> s) {
+        Stack<Integer> temp = new Stack<Integer>();
+
+        while (s.empty() == false) {
+            temp.push(s.peek());
+            s.pop();
+        }
+
+        while (temp.empty() == false) {
+            int t = temp.peek();
+            System.out.print(t + " ");
+            temp.pop();
+
+            // To restore contents of
+            // the original stack.
+            s.push(t);
+        }
     }
-    public static void PrintStack(Stack<String> s)
-    {
-      Stack<String> temp = new Stack<String>();
-       
-      while (s.empty() == false)
-      {
-        temp.push(s.peek());
-        s.pop();
-      }   
-     
-      while (temp.empty() == false)
-      {
-        String t = temp.peek();
-        System.out.print(t + " ");
-        temp.pop();
-     
-        // To restore contents of
-        // the original stack.
-        s.push(t);  
-      }
+
+    public static void PrintStack(Stack<String> s) {
+        Stack<String> temp = new Stack<String>();
+
+        while (s.empty() == false) {
+            temp.push(s.peek());
+            s.pop();
+        }
+
+        while (temp.empty() == false) {
+            String t = temp.peek();
+            System.out.print(t + " ");
+            temp.pop();
+
+            // To restore contents of
+            // the original stack.
+            s.push(t);
+        }
     }
-     
+
     ////////////////////////////////////////////////////////////////////////////////////////////
     Set<String> set = new HashSet<String>();
     Set<Character> deli = new HashSet<Character>();
@@ -64,7 +59,7 @@ public class Core {
 
         deli.add(' ');
         deli.add('(');
-
+        deli.add(';');
         // System.out.println(data);
         String keyword = "";
         String data2;
@@ -189,7 +184,7 @@ public class Core {
                 data3 += ";";
                 i++;
                 System.out.println(data3 + "$$$$");
-               Coreassign.coreassign(data3);
+                Coreassign.coreassign(data3);
 
             }
             // System.out.println(i+" "+data.length());

@@ -3,3 +3,26 @@ the second new value of a is60
 hii it is-->2060
 helloooo it is-->60
 byeee
+10
+the second new value of a is60
+hii it is-->2060
+helloooo it is-->60
+byeee
+10
+the new value of a is60
+the second new value of a is60
+hii it is-->2060
+helloooo it is-->60
+byeee
+10
+the new value of a is60
+the second new value of a is60
+hii it is-->2060
+helloooo it is-->60
+byeee
+10
+the new value of a is80
+the second new value of a is70
+hii it is-->2070
+helloooo it is-->70
+byeee
