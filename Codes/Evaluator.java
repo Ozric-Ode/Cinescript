@@ -1,12 +1,13 @@
-package features;
-import java.util.Stack; 
-import datatypes.Coreverify;
+// package features;
+import java.util.*; 
+// import datatypes.Coreverify;
+
 
 
 
 public class Evaluator 
 { 
-	public static int evaluate(String expression) 
+	public static double evaluate(String expression) 
 	{ 
 		Coreverify cv=new Coreverify();
 		System.out.println(expression+"@@");
@@ -18,7 +19,7 @@ public class Evaluator
 		char[] tokens = expression.toCharArray(); 
 
 		 
-		Stack<Integer> values = new Stack<Integer>(); 
+		Stack<Double> values = new Stack<Double>(); 
 
 	
 		Stack<Character> ops = new Stack<Character>(); 
@@ -30,13 +31,13 @@ public class Evaluator
 				continue; 
 
 			
-			if (tokens[i] >= '0' && tokens[i] <= '9') 
+			if ((tokens[i] >= '0' && tokens[i] <= '9')||tokens[i]=='.') 
 			{ 
 				StringBuffer sbuf = new StringBuffer(); 
 			
-				while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9') 
+				while (i < tokens.length && ((tokens[i] >= '0' && tokens[i] <= '9')||tokens[i]=='.')) 
 					sbuf.append(tokens[i++]); 
-				values.push(Integer.parseInt(sbuf.toString())); 
+				values.push(Double.parseDouble(sbuf.toString())); 
 			} 
  
 			else if (tokens[i] == '(') 
@@ -80,7 +81,7 @@ public class Evaluator
 	} 
 
 	
-	public static int applyOp(char op, int b, int a) 
+	public static double applyOp(char op, double b, double a) 
 	{ 
 		switch (op) 
 		{ 
@@ -98,7 +99,6 @@ public class Evaluator
 		} 
 		return 0; 
 	} 
-
 	 
 	
 }
