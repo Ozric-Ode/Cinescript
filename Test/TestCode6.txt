@@ -1,0 +1,34 @@
+ekdoteen a=10;
+ekdoteen b=2;
+agartummiljao( a > b)
+{
+    elaan(a);
+    ekdoteen c=20;
+    agartummiljao(c > a)
+    {
+        a=80;
+        elaan("the new value of a is", a );
+        a = 70 ;
+        elaan("the second new value of a is", a );
+        elaan("hii it is-->", c , a );
+         elaan("helloooo it is-->", c + a );
+         ekdoteen d=200;
+         agartummiljao(d < b)
+         {
+             elaan("hello");
+         }
+         agartummiljao(d > b)
+         {
+             elaan("byeee");
+         }
+         warna
+         {
+             elaan("faaltu");
+         }
+
+    }
+    warna
+    {
+        elaan("ggg");
+    }
+}
