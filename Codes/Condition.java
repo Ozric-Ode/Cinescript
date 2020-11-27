@@ -29,18 +29,18 @@ public class Condition extends Exception{
 
 		var1=var1.trim();
 		var2=var2.trim();
-		int result1,result2;
-		boolean isBothInt=false;
+		double result1,result2;
+		boolean notString=false;
 		try {
-			Integer.parseInt( var1 );		
-			Integer.parseInt( var2 );		
-			isBothInt=true;
+			Double.parseDouble( var1 );		
+			Double.parseDouble( var2 );		
+			notString=true;
 		}
 		catch( Exception e ) {
-			isBothInt=false;
+			notString=false;
 		}
 
-		if(isBothInt){
+		if(notString){
 			result1=Evaluator.evaluate(var1);
 			result2=Evaluator.evaluate(var2);
 			switch(symbol){
