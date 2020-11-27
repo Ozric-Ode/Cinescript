@@ -56,6 +56,7 @@ public class Core {
         set.add("agartummiljao");
         set.add("warna");
         set.add("ekdoteen");
+        set.add("jabtakhaijaan");
 
         deli.add(' ');
         deli.add('(');
@@ -93,8 +94,7 @@ public class Core {
                     // System.out.println(data1);
                     i++;
 
-                }
-                if (keyword.charAt(0) == 'a') {
+                } else if (keyword.charAt(0) == 'a') {
                     data2 += keyword;
                     while (data.charAt(i) != ')') {
                         data2 += data.charAt(i);
@@ -134,7 +134,7 @@ public class Core {
                             i += len2 + 2;
                             data2 += '}';
                         }
-                    }
+                    } 
                     // System.out.println(data2 + " $$$");
 
                     Coreif cf = new Coreif();
@@ -171,6 +171,28 @@ public class Core {
                     i++;
                     System.out.println(data3 + "@@@@");
                     cdl.declare(data3);
+
+                }
+                if (keyword.equals("jabtakhaijaan")) {
+                    data2 += keyword;
+                    while (data.charAt(i) != ')') {
+                        data2 += data.charAt(i);
+                        i++;
+                    }
+                    data2 += ')';
+                    i++;
+                    data2 += '{';
+                    String str2 = data.substring(i);
+                    String ext_str2 = Precore.extract(str2);
+                    Precore.scope = Precore.scope - 1;
+                    /////////////////////////
+                    int len2 = ext_str2.length();
+                    data2 += ext_str2;
+                    i += len2 + 2;
+                    data2 += '}';
+
+                    Corewhile cw = new Corewhile();
+                    cw.process(data);
 
                 }
 
