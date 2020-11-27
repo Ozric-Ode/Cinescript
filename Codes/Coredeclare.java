@@ -5,6 +5,8 @@ import services.*;
 
 public class Coredeclare {
     public static Map<String, Integer> inttype_map = new HashMap<String, Integer>();
+    public static Map<String, String> stringtype_map = new HashMap<String, String>();
+    public static Map<String, Double> doubletype_map = new HashMap<String, Double>();
     Set<Character> deli = new HashSet<Character>();
     public void declare(String dec) {
         deli.add(' ');
@@ -12,7 +14,8 @@ public class Coredeclare {
         deli.add('=');
         Set<String> dt_set = new HashSet<String>(); 
         dt_set.add("ekdoteen"); 
-        dt_set.add("lafzonmein");  
+        dt_set.add("lafzonmein");
+        dt_set.add("dhaiaksharpremke");  
         Corescope scope=new Corescope();       
         String datatype="";
         String var="";
@@ -50,7 +53,34 @@ public class Coredeclare {
                 }
                 
             }
-        }   
+            if(datatype.charAt(0)=='l'){
+                while(i<dec.length() && !deli.contains(dec.charAt(i))){
+                    var+=dec.charAt(i);
+                    i++;
+                }
+                var=var.trim();
+                System.out.println("$$"+var);
+                stringtype_map.put(var," ");
+                scope.Enterscope(var);
+                if(flag==1){
+                    Coreassign.coreassign(assign);
+                }
+
+            }
+            if(datatype.charAt(0)=='l'){
+                while(i<dec.length() && !deli.contains(dec.charAt(i))){
+                    var+=dec.charAt(i);
+                    i++;
+                }
+                var=var.trim();
+                System.out.println("$$"+var);
+                doubletype_map.put(var,0.00);
+                scope.Enterscope(var);
+                if(flag==1){
+                    Coreassign.coreassign(assign);
+                }   
+            }
+        }
     }
 }
 
