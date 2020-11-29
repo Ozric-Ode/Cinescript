@@ -7,10 +7,8 @@ import java.util.Stack;
 
 import datatypes.Corescope;
 
-public class Coreif {
-    ////////////////////////////////////////////////////////////////////////////////////////////
+public class Corewhile {
 
-    ////////////////////////////////////////////////////////////////////////////////////////////
     public boolean extract_condition(String s) {
         int ind = 0;
         // System.out.println(s);
@@ -42,8 +40,6 @@ public class Coreif {
     }
 
     public void process(String data) {
-        // System.out.println(data);
-        boolean cnd = extract_condition(data);
         int ind = 0;
         for (int i = 0; i < data.length(); i++) {
             if (data.charAt(i) == '{') {
@@ -53,37 +49,15 @@ public class Coreif {
         }
 
         String sdata = Precore.extract(data.substring(ind));
-        Precore.scope--;
-        int ind2 = ind + sdata.length() + 1;
-
         Core cr = new Core();
         Corescope cs = new Corescope();
-
-        // System.out.println("THE ind2"+ind2+" "+data.length());
-        if (cnd) {
-            Precore.scope++;
+        while(extract_condition(data))
+        {
             System.out.println("the condition is " + cnd + "scoppp==" + Precore.scope);
             cs.Enterscope("0");
             cr.command(sdata);
         }
 
-        else if (ind2 + 1 < data.length()) {
-            for (int i = ind2; i < data.length(); i++) {
-                if (data.charAt(i) == '{') {
-                    ind = i;
-                    break;
-                }
-            }
-
-            String sdata2 = Precore.extract(data.substring(ind));
-
-            // Precore.scope--;
-
-            // Precore.scope++;
-            System.out.println("the condition is " + cnd + "scoppp==" + Precore.scope);
-            cs.Enterscope("0");
-            cr.command(sdata2);
-        }
-
     }
+
 }

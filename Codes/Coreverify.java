@@ -60,8 +60,14 @@ public class Coreverify {
             if (!onlyDigits(word) && !set.contains(word)) {
                 System.out.println(word + " *");
                 if (Corescope.scope_variables.contains(word)) {
-                    
+
                     newdata += Coredeclare.inttype_map.get(word) + " ";
+                } else if (Corescope.scope_variables.contains(word)) {
+
+                    newdata += Coredeclare.stringtype_map.get(word) + " ";
+                } else if (Corescope.scope_variables.contains(word)) {
+
+                    newdata += Coredeclare.doubletype_map.get(word) + " ";
                 } else {
                     System.out.print("Variable Not found");
                 }
