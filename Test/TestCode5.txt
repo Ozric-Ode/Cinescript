@@ -1,1 +1,4 @@
 ekdoteen a = 5;
+ekdoteen b =5;
+a = b + 10;
+elaan(a);

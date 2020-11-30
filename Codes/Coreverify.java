@@ -48,6 +48,11 @@ public class Coreverify {
         set.add(">=");
         set.add("==");
         set.add("!=");
+        set.add("+");
+        set.add("-");
+        set.add("/");
+        set.add("*");
+        set.add("%");
         String newdata = "";
 
         for (int i = 0; i < data.length(); i++) {
@@ -62,6 +67,7 @@ public class Coreverify {
                 if (Corescope.scope_variables.contains(word)) {
 
                     newdata += Coredeclare.inttype_map.get(word) + " ";
+                    System.out.println(" ################# "+ Coredeclare.inttype_map.get(word) );
                 } else if (Corescope.scope_variables.contains(word)) {
 
                     newdata += Coredeclare.stringtype_map.get(word) + " ";
@@ -69,7 +75,7 @@ public class Coreverify {
 
                     newdata += Coredeclare.doubletype_map.get(word) + " ";
                 } else {
-                    System.out.print("Variable Not found");
+                    System.out.println("Variable Not found "+ word);
                 }
             } else {
                 newdata += word + " ";

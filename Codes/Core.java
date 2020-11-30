@@ -57,6 +57,7 @@ public class Core {
         set.add("warna");
         set.add("ekdoteen");
         set.add("jabtakhaijaan");
+        
 
         deli.add(' ');
         deli.add('(');
@@ -174,6 +175,7 @@ public class Core {
 
                 }
                 if (keyword.equals("jabtakhaijaan")) {
+                    System.out.println("In while");
                     data2 += keyword;
                     while (data.charAt(i) != ')') {
                         data2 += data.charAt(i);

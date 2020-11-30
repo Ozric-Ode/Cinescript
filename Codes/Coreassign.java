@@ -5,7 +5,9 @@ import java.util.*;
 import features.Evaluator;
 
 public class Coreassign {
+	
 	public static void coreassign(String str){
+		
 		String var="";
 		String expression="";
 		boolean isEquality=false;
@@ -66,12 +68,14 @@ public class Coreassign {
 
 	}
 	public static String getConcatenatedString(String s){
+		Stack<Character> mainStack = new Stack<Character>();
 		String s_final="";
 		String s_cnc="";
 		String s_exp="";		
 		for (int j = 0; j < s.length(); j++) {
 
-			if(s.charAt(j)==(char)34)
+			//Stack<String> mainStack;
+			if (s.charAt(j) == (char) 34)
 			{
 				if(mainStack.empty())
 				{mainStack.push((Character) s.charAt(j));}

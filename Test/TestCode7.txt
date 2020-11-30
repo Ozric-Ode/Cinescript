@@ -1,0 +1,8 @@
+ekdoteen a = 1;
+ekdoteen b = 1;
+jabtakhaijaan( a <= 5 ) 
+{
+    elaan("This is our", a);
+    
+    a = 1 + a;
+}
