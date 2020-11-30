@@ -13,6 +13,13 @@ public class Input {
         Core core = new Core();
         try {
             File myObj = new File("..\\Test\\TestCode7.txt");
+            // try {
+			// 	FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt",true);
+			// 	writer.write("");
+			// 	writer.close();
+			// } catch (Exception e) {
+			// 	System.out.println("An error occurred.");
+			// }
             Scanner myReader = new Scanner(myObj);
             boolean isBracketed = false, isIf = false;
             boolean result = false;

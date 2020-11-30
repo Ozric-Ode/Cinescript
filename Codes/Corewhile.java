@@ -49,11 +49,20 @@ public class Corewhile {
         }
 
         String sdata = Precore.extract(data.substring(ind));
+        Precore.scope--;
+        int ind2 = ind + sdata.length() + 1;
+
+        int e = 0;
+
         Core cr = new Core();
         Corescope cs = new Corescope();
         System.out.println("the initial condition is " + extract_condition(data));
-        while(extract_condition(data))
-        {
+        System.out.println(data);
+        while (extract_condition(data)) {
+            if (e == 0) {
+                Precore.scope++;
+                e = 1;
+            }
             System.out.println("the condition is " + extract_condition(data) + "scoppp==" + Precore.scope);
             cs.Enterscope("0");
             cr.command(sdata);

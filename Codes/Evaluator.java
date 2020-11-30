@@ -10,7 +10,7 @@ public class Evaluator
 	public static double evaluate(String expression) 
 	{ 
 		Coreverify cv=new Coreverify();
-		System.out.println(expression+"@@");
+		System.out.println(expression+"@@####%%");
 		expression = cv.verify(expression);
 		// String expression="";
 		// for(int i=0;i<expression1.length();i++)

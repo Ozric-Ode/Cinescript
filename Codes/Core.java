@@ -57,7 +57,6 @@ public class Core {
         set.add("warna");
         set.add("ekdoteen");
         set.add("jabtakhaijaan");
-        
 
         deli.add(' ');
         deli.add('(');
@@ -135,20 +134,20 @@ public class Core {
                             i += len2 + 2;
                             data2 += '}';
                         }
-                    } 
+                    }
                     // System.out.println(data2 + " $$$");
 
                     Coreif cf = new Coreif();
                     Corescope cs = new Corescope();
                     int previous = Precore.scope;
                     cf.process(data2);
-                    PrintStack(Corescope.scope_variables);
-                    System.out.println("===========");
+                    // PrintStack(Corescope.scope_variables);
+                    // System.out.println("===========");
 
-                    PrintStackint(Corescope.current_scope);
-                    System.out.println("===========");
-                    PrintStackint(Corescope.scope_stack);
-                    System.out.println("===========");
+                    // PrintStackint(Corescope.current_scope);
+                    // System.out.println("===========");
+                    // PrintStackint(Corescope.scope_stack);
+                    // System.out.println("===========");
 
                     //////////////////////////////////////////////////////////////////////////////////////
                     if (previous != Precore.scope) {
@@ -160,8 +159,7 @@ public class Core {
 
                     // System.out.println(i+" "+data.length());
 
-                }
-                if (keyword.equals("ekdoteen")) {
+                } else if (keyword.equals("ekdoteen")) {
                     String data3 = "";
                     data3 += "ekdoteen";
                     while (data.charAt(i) != ';') {
@@ -173,8 +171,8 @@ public class Core {
                     System.out.println(data3 + "@@@@");
                     cdl.declare(data3);
 
-                }
-                if (keyword.equals("jabtakhaijaan")) {
+                } else if (keyword.equals("jabtakhaijaan")) 
+                {
                     System.out.println("In while");
                     data2 += keyword;
                     while (data.charAt(i) != ')') {
@@ -194,7 +192,26 @@ public class Core {
                     data2 += '}';
 
                     Corewhile cw = new Corewhile();
-                    cw.process(data);
+                    cw.process(data2);
+
+                    Corescope cs = new Corescope();
+                    int previous = Precore.scope;
+
+                    // PrintStack(Corescope.scope_variables);
+                    // System.out.println("===========");
+
+                    // PrintStackint(Corescope.current_scope);
+                    // System.out.println("===========");
+                    // PrintStackint(Corescope.scope_stack);
+                    // System.out.println("===========");
+
+                    //////////////////////////////////////////////////////////////////////////////////////
+                    if (previous != Precore.scope) {
+                        System.out.println("the removescope");
+                        cs.Removescope();
+                        Precore.scope--;
+                    }
+                    System.out.println("the currscope is" + Precore.scope);
 
                 }
 
