@@ -5,6 +5,31 @@ import java.util.regex.*;
 import datatypes.Corescope;
 
 public class Coreverify {
+    static boolean checkDigit(String data) {
+		boolean numeric = true;
+
+		numeric = data.matches("-?\\d+(\\.\\d+)?");
+		return numeric;
+	}
+
+    public static void PrintStack(Stack<String> s) {
+        Stack<String> temp = new Stack<String>();
+
+        while (s.empty() == false) {
+            temp.push(s.peek());
+            s.pop();
+        }
+
+        while (temp.empty() == false) {
+            String t = temp.peek();
+            System.out.print(t + " ");
+            temp.pop();
+
+            // To restore contents of
+            // the original stack.
+            s.push(t);
+        }
+    }
 
     public static boolean onlyDigits(String str) {
         // Regex to check string
@@ -48,6 +73,11 @@ public class Coreverify {
         set.add(">=");
         set.add("==");
         set.add("!=");
+        set.add("+");
+        set.add("-");
+        set.add("/");
+        set.add("*");
+        set.add("%");
         String newdata = "";
 
         for (int i = 0; i < data.length(); i++) {
@@ -57,19 +87,25 @@ public class Coreverify {
                 i++;
             }
 
-            if (!onlyDigits(word) && !set.contains(word)) {
-                System.out.println(word + " *");
+            PrintStack(Corescope.scope_variables);
+            System.out.println(Corescope.scope_variables.size()+"===========");
+
+            if (!checkDigit(word) && !set.contains(word)) {
+                System.out.println(word + "*");
                 if (Corescope.scope_variables.contains(word)) {
 
-                    newdata += Coredeclare.inttype_map.get(word) + " ";
-                } else if (Corescope.scope_variables.contains(word)) {
-
-                    newdata += Coredeclare.stringtype_map.get(word) + " ";
-                } else if (Corescope.scope_variables.contains(word)) {
-
-                    newdata += Coredeclare.doubletype_map.get(word) + " ";
+                    if (Coredeclare.inttype_map.containsKey(word)) {
+                        newdata += Coredeclare.inttype_map.get(word) + " ";
+                    } else if (Coredeclare.stringtype_map.containsKey(word)) {
+                        newdata += (char) 34 + Coredeclare.stringtype_map.get(word) + (char) 34 + " ";
+                    } else if (Coredeclare.doubletype_map.containsKey(word)) {
+                        newdata += Coredeclare.doubletype_map.get(word) + " ";
+                    }
+                    System.out.println(" ################# " + newdata);
+                    // System.out.println(" ################# "+ Coredeclare.inttype_map.get(word)
+                    // );
                 } else {
-                    System.out.print("Variable Not found");
+                    System.out.println("Variable Not found " + word);
                 }
             } else {
                 newdata += word + " ";
@@ -77,7 +113,8 @@ public class Coreverify {
             }
 
         }
-        newdata = " " + newdata;
+   //     newdata = " " + newdata;
+        System.out.println(" @@@@@@@@@@@@@" + newdata);
         return newdata;
 
     }

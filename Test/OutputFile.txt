@@ -1,34 +1,31 @@
-10
-the second new value of a is60
-hii it is-->2060
-helloooo it is-->60
-byeee
-10
-the second new value of a is60
-hii it is-->2060
-helloooo it is-->60
-byeee
-10
-the new value of a is60
-the second new value of a is60
-hii it is-->2060
-helloooo it is-->60
-byeee
-10
-the new value of a is60
-the second new value of a is60
-hii it is-->2060
-helloooo it is-->60
-byeee
-10
-the new value of a is80
-the second new value of a is70
-hii it is-->2070
-helloooo it is-->70
-byeee
-10
-the new value of a is80
-the second new value of a is70
-hii it is-->2070
-helloooo it is-->70
-byeee
+beyyyyheyyyy 0 5
+beyyyyheyyyy 0 5
+beyyyyheyyyy 0 5
+0
+beyyyyheyyyy 0 5
+0
+ s4 = 1
+ s4 = 2
+ s4 = 3
+ s4 = 4
+ s4 = 5
+beyyyyheyyyy 0 5
+0
+ s4 = 1
+ s4 = 2
+ s4 = 3
+heyyyy beyyyy 3
+ s4 = 4
+ s4 = 5
+beyyyyheyyyy 0.01 5
+0.01
+ s4 = 0.51
+ s4 = 1.01
+ s4 = 1.51
+ s4 = 2.01
+ s4 = 2.51
+ s4 = 3.01
+ s4 = 3.51
+ s4 = 4.01
+ s4 = 4.51
+ s4 = 5.01

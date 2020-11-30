@@ -67,7 +67,7 @@ public class Coredeclare {
                 }
 
             }
-            if(datatype.charAt(0)=='l'){
+            if(datatype.charAt(0)=='d'){
                 while(i<dec.length() && !deli.contains(dec.charAt(i))){
                     var+=dec.charAt(i);
                     i++;
