@@ -1,5 +1,6 @@
 package features;
 import datatypes.Coreverify;
+import services.Precore;
 
 
 public class Condition extends Exception{
@@ -23,6 +24,8 @@ public class Condition extends Exception{
 
 
 	public static boolean checkCondition(String data){
+
+		data=Precore.correctString(data);
 
 		Coreverify cv=new Coreverify();
 		data = cv.verify(data);
