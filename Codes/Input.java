@@ -12,7 +12,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-            File myObj = new File("..\\Test\\TestCode7.txt");
+            File myObj = new File("..\\Test\\TestCode5.txt");
             // try {
 			// 	FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt",true);
 			// 	writer.write("");

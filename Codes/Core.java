@@ -57,7 +57,8 @@ public class Core {
         set.add("warna");
         set.add("ekdoteen");
         set.add("jabtakhaijaan");
-
+        set.add("lafzonmein");
+        set.add("dhaiaksharpremke");
         deli.add(' ');
         deli.add('(');
         deli.add(';');
@@ -212,6 +213,30 @@ public class Core {
                         Precore.scope--;
                     }
                     System.out.println("the currscope is" + Precore.scope);
+
+                }else if (keyword.equals("lafzonmein")) {
+                    String data3 = "";
+                    data3 += "lafzonmein";
+                    while (data.charAt(i) != ';') {
+                        data3 += data.charAt(i);
+                        i++;
+                    }
+                    data3 += ";";
+                    i++;
+                    System.out.println(data3 + "@@@@");
+                    cdl.declare(data3);
+
+                }else if (keyword.equals("dhaiaksharpremke")) {
+                    String data3 = "";
+                    data3 += "dhaiaksharpremke";
+                    while (data.charAt(i) != ';') {
+                        data3 += data.charAt(i);
+                        i++;
+                    }
+                    data3 += ";";
+                    i++;
+                    System.out.println(data3 + "@@@@");
+                    cdl.declare(data3);
 
                 }
 
