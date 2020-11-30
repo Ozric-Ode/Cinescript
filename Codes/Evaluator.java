@@ -2,6 +2,7 @@ package features;
 
 import java.util.*;
 import datatypes.Coreverify;
+import services.Precore;
 
 public class Evaluator {
 	public Boolean check(String s)// return true if given parameter is string
@@ -28,6 +29,7 @@ public class Evaluator {
 	}
 
 	public static String evaluate(String expression) {
+		expression=Precore.correctString(expression);
 		String ans = "";
 		Coreverify cv = new Coreverify();
 		System.out.println(expression + "@@####%%");

@@ -5,6 +5,7 @@ import java.io.FileWriter; // Import the FileWriter class
 import java.io.IOException; // Import the IOException class to handle errors
 
 import features.*;
+import services.Precore;
 
 public class PrintInfo {
 
@@ -70,7 +71,9 @@ public class PrintInfo {
 					}
 
 					s_exp = "";
-				} else
+				} else if(s.charAt(j) == ' ')
+				continue;
+				else
 					s_exp = s_exp + s.charAt(j);
 
 			}
