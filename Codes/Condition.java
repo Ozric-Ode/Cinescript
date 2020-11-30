@@ -63,7 +63,7 @@ public class Condition extends Exception{
 			
 			if (checkDigit(Evaluator.evaluate(var1))) {
 				if (checkInt(Evaluator.evaluate(var1))) {
-					result1 =  Integer.parseInt(Evaluator.evaluate(var1));
+					result1 =  (int)Double.parseDouble(Evaluator.evaluate(var1));
 				} else {
 					result1 =  Double.parseDouble(Evaluator.evaluate(var1));
 				}
@@ -75,7 +75,7 @@ public class Condition extends Exception{
 			
 			if (checkDigit(Evaluator.evaluate(var1))) {
 				if (checkInt(Evaluator.evaluate(var1))) {
-					result2 =  Integer.parseInt(Evaluator.evaluate(var2));
+					result2 =  (int)Double.parseDouble(Evaluator.evaluate(var2));
 				} else {
 					result2 =  Double.parseDouble(Evaluator.evaluate(var2));
 				}

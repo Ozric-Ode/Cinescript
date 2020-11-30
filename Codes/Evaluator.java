@@ -42,15 +42,15 @@ public class Evaluator {
 			for (int i = 0; i < arrOfStr.length; i++) {
 				System.out.println("valueeeeeeeeeee=beforeeeeeeee===========" + arrOfStr[i]);
 				if (arrOfStr[i].contains(Character.toString((char) 34)) == true) {
-					ans = ans + arrOfStr[i].substring(1,arrOfStr[i].length()-1);
+					ans = ans + arrOfStr[i].substring(1,arrOfStr[i].length()-1).trim();
 				} else {
 					System.out.println("valueeeeeeeeeee=befor===========" + arrOfStr[i]);
 					arrOfStr[i] = cv.verify(arrOfStr[i]);
 					System.out.println("valueeeeeeeeeee=" + arrOfStr[i]);
 					if (arrOfStr[i].contains(Character.toString((char) 34)) == true) {
-						ans = ans + arrOfStr[i].substring(1,arrOfStr[i].length()-1);
+						ans = ans + arrOfStr[i].substring(1,arrOfStr[i].length()-1).trim();
 					} else
-						ans = ans + evaluation(arrOfStr[i]);
+						ans = ans + evaluation(arrOfStr[i].trim());
 				}
 			}
 
@@ -60,9 +60,9 @@ public class Evaluator {
 			expression = cv.verify(expression);
 			System.out.println("valueeeeeeeeeee=" + expression);
 			if (expression.contains(Character.toString((char) 34)) == true) {
-				ans = ans + expression.substring(1,expression.length()-1);
+				ans = ans + expression.substring(1,expression.length()-1).trim();
 			} else
-				ans = ans + evaluation(expression);
+				ans = ans + evaluation(expression.trim());
 		}
 		// ans=ans+evaluation(expression);
 

@@ -47,7 +47,7 @@ public class Coreassign {
 		if (Coredeclare.inttype_map.containsKey(var) == true) {
 			if (Corescope.scope_variables.contains(var) == true) {
 				if (checkInt(Evaluator.evaluate(expression))) {
-					int result = Integer.parseInt(Evaluator.evaluate(expression));
+					int result =(int) Double.parseDouble(Evaluator.evaluate(expression));
 					Coredeclare.inttype_map.replace(var, result);
 				} else {
 					// throw of error of providing a suitable type casting to convert double to int
@@ -107,7 +107,7 @@ public class Coreassign {
 					if (s_exp.length() != 0) {
 						if (checkDigit(Evaluator.evaluate(s_exp))) {
 							if (checkInt(Evaluator.evaluate(s_exp))) {
-								s_final = s_final + Integer.parseInt(Evaluator.evaluate(s_exp));
+								s_final = s_final +(int) Double.parseDouble(Evaluator.evaluate(s_exp));
 							} else {
 								s_final = s_final + Double.parseDouble(Evaluator.evaluate(s_exp));
 							}
@@ -127,7 +127,7 @@ public class Coreassign {
 		if (s_exp.length() != 0) {
 			if (checkDigit(Evaluator.evaluate(s_exp))) {
 				if (checkInt(Evaluator.evaluate(s_exp))) {
-					s_final = s_final + Integer.parseInt(Evaluator.evaluate(s_exp));
+					s_final = s_final + (int) Double.parseDouble(Evaluator.evaluate(s_exp));
 				} else {
 					s_final = s_final + Double.parseDouble(Evaluator.evaluate(s_exp));
 				}

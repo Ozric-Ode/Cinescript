@@ -58,7 +58,7 @@ public class PrintInfo {
 					if (s_exp.length() != 0) {
 						if (checkDigit(Evaluator.evaluate(s_exp))) {
 							if (checkInt(Evaluator.evaluate(s_exp))) {
-								s_final = s_final + Integer.parseInt(Evaluator.evaluate(s_exp));
+								s_final = s_final + (int)Double.parseDouble(Evaluator.evaluate(s_exp));
 							} else {
 								s_final = s_final + Double.parseDouble(Evaluator.evaluate(s_exp));
 							}
@@ -79,7 +79,7 @@ public class PrintInfo {
 		if (s_exp.length() != 0) {
 			if (checkDigit(Evaluator.evaluate(s_exp))) {
 				if (checkInt(Evaluator.evaluate(s_exp))) {
-					s_final = s_final + Integer.parseInt(Evaluator.evaluate(s_exp));
+					s_final = s_final + (int)Double.parseDouble(Evaluator.evaluate(s_exp));
 				} else {
 					s_final = s_final + Double.parseDouble(Evaluator.evaluate(s_exp));
 				}
