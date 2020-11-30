@@ -1,0 +1,15 @@
+lafzonmein s1 = "heyyyy";
+lafzonmein s2 = "beyyyy";
+dhaiaksharpremke s4 = 0.01;
+lafzonmein s3 = s2 $ s1;
+elaan(s3 $ s4 $ 5);
+elaan(s4);
+jabtakhaijaan(s4 < 5)
+{
+    s4 = s4 + 0.5;
+    elaan(" s4 = ", s4 );
+    agartummiljao(s4 == 3)
+    {
+        elaan( s1 $ s2 $ s4);
+    }
+}

@@ -5,6 +5,12 @@ import java.util.regex.*;
 import datatypes.Corescope;
 
 public class Coreverify {
+    static boolean checkDigit(String data) {
+		boolean numeric = true;
+
+		numeric = data.matches("-?\\d+(\\.\\d+)?");
+		return numeric;
+	}
 
     public static void PrintStack(Stack<String> s) {
         Stack<String> temp = new Stack<String>();
@@ -84,7 +90,7 @@ public class Coreverify {
             PrintStack(Corescope.scope_variables);
             System.out.println(Corescope.scope_variables.size()+"===========");
 
-            if (!onlyDigits(word) && !set.contains(word)) {
+            if (!checkDigit(word) && !set.contains(word)) {
                 System.out.println(word + "*");
                 if (Corescope.scope_variables.contains(word)) {
 

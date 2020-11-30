@@ -141,7 +141,7 @@ public class Evaluator {
 			case '/':
 				if (b == 0)
 					throw new UnsupportedOperationException("Cannot divide by zero");
-				return a / b;
+				return a / b;	
 		}
 		return 0;
 	}
