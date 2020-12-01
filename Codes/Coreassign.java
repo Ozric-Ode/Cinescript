@@ -3,6 +3,7 @@ package datatypes;
 import java.util.*;
 
 import features.Evaluator;
+import exceptionhandle.FinalException;
 
 public class Coreassign {
 	static boolean checkDigit(String data) {
@@ -22,6 +23,8 @@ public class Coreassign {
 	}
 
 	public static void coreassign(String str) {
+		
+	
 
 		String var = "";
 		String expression = "";
@@ -42,6 +45,17 @@ public class Coreassign {
 		}
 
 		var = var.trim();
+//string a                a
+		try
+		{
+		FinalException.checkScope(var);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.toString());
+			System.exit(0);
+		}
+
 		expression = expression.trim();
 
 		if (Coredeclare.inttype_map.containsKey(var) == true) {

@@ -2,6 +2,7 @@ package datatypes;
 
 import java.util.*;
 import services.*;
+import exceptionhandle.*;
 
 public class Coredeclare {
     public static Map<String, Integer> inttype_map = new HashMap<String, Integer>();
@@ -9,6 +10,8 @@ public class Coredeclare {
     public static Map<String, Double> doubletype_map = new HashMap<String, Double>();
     Set<Character> deli = new HashSet<Character>();
     public void declare(String dec) {
+        //////////////////////////////////////////////
+        
         deli.add(' ');
         deli.add(';');
         deli.add('=');
@@ -38,41 +41,48 @@ public class Coredeclare {
         assign = assign.trim();
         i++;
         System.out.println(assign);
+
+
+        //////////////////////////////////////////////////////
+
+        while(i<dec.length() && !deli.contains(dec.charAt(i))){
+            var+=dec.charAt(i);
+            i++;
+        }
+        var=var.trim();
+        //////////////////////////////////////////////////////////
+        try{
+            FinalException.checkDeclare(var);
+            }
+            catch(Exception e){
+                System.out.println("-----------------------------7654321987654q23456787654wdwfghjdviu yhdchebdc---------"+e.toString());
+                System.exit(0);
+                // return;
+            }
+
         if(dt_set.contains(datatype)) {
             if(datatype.charAt(0)=='e') {
-                while(i<dec.length() && !deli.contains(dec.charAt(i))) {
-                    var+=dec.charAt(i);
-                    i++;
-                }
-                var = var.trim();
+              
+              
                 System.out.println("$$"+var);
                 inttype_map.put(var, 0);
                 scope.Enterscope(var);
                 if(flag==1) {
                     Coreassign.coreassign(assign);
                 }
-                
             }
             if(datatype.charAt(0)=='l'){
-                while(i<dec.length() && !deli.contains(dec.charAt(i))){
-                    var+=dec.charAt(i);
-                    i++;
-                }
-                var=var.trim();
+              
+               
                 System.out.println("$$"+var);
                 stringtype_map.put(var," ");
                 scope.Enterscope(var);
                 if(flag==1){
                     Coreassign.coreassign(assign);
                 }
-
             }
             if(datatype.charAt(0)=='d'){
-                while(i<dec.length() && !deli.contains(dec.charAt(i))){
-                    var+=dec.charAt(i);
-                    i++;
-                }
-                var=var.trim();
+               
                 System.out.println("$$"+var);
                 doubletype_map.put(var,0.00);
                 scope.Enterscope(var);
