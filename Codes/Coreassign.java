@@ -58,6 +58,7 @@ public class Coreassign {
 		}
 
 		var = var.trim();
+		System.out.println("var==="+var);
 		try {
 			FinalException.checkScope(var);
 		} catch (Exception e) {
@@ -110,8 +111,9 @@ public class Coreassign {
 			if (Corescope.scope_variables.contains(var) == true) {
 			//	System.out.println("expppppppppppppppp" + expression);
 				String sresult = getConcatenatedString(expression);
+				String ssresult="\""+sresult+"\"";
 				try {
-					FinalException.checkDatatype(var, sresult);
+					FinalException.checkDatatype(var, ssresult);
 				} catch (Exception e) {
 					System.out
 							.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"

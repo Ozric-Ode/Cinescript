@@ -3,6 +3,7 @@ package datatypes;
 import java.util.*;
 import java.util.regex.*;
 import datatypes.Corescope;
+import exceptionhandle.FinalException;
 
 public class Coreverify {
     static boolean checkDigit(String data) {
@@ -87,11 +88,27 @@ public class Coreverify {
                 i++;
             }
 
+            //////////////////////////
+         //   
+
             PrintStack(Corescope.scope_variables);
             System.out.println(Corescope.scope_variables.size()+"===========");
 
             if (!checkDigit(word) && !set.contains(word)) {
-                System.out.println(word + "*");
+
+               
+                try{
+                  //    System.out.println("hhhhhhhhhhhhhhhhhhhhhhhh"+word);
+                    if(FinalException.compat(word)==4)
+                   FinalException.checkScope(word);
+                   }
+                   catch(Exception e)
+                   {
+                       System.out.println(word + "*");
+                       System.out.println("------------------------------------------------"+e.toString());
+                       System.exit(0);
+                   }
+                 
                 if (Corescope.scope_variables.contains(word)) {
 
                     if (Coredeclare.inttype_map.containsKey(word)) {
@@ -105,9 +122,10 @@ public class Coreverify {
                     // System.out.println(" ################# "+ Coredeclare.inttype_map.get(word)
                     // );
                 } else {
-                    System.out.println("Variable Not found " + word);
+                   
                 }
             } else {
+              //  System.out.println("hhhhhhhhhhhhhhvvvvvvvvvvvvv"+word);
                 newdata += word + " ";
 
             }
