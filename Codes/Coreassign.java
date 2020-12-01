@@ -3,6 +3,7 @@ package datatypes;
 import java.util.*;
 
 import features.Evaluator;
+import exceptionhandle.FinalException;
 
 public class Coreassign {
 	static boolean checkDigit(String data) {
@@ -22,6 +23,21 @@ public class Coreassign {
 	}
 
 	public static void coreassign(String str) {
+	//	System.out.println("#################"+str);
+		try{
+			FinalException.checkSemicolon(str);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.toString());
+			System.exit(0);
+		}
+		try {
+			FinalException.checkOperator(str);
+		} catch (Exception e) {
+			System.out.println(e.toString());
+			System.exit(0);
+		}
 
 		String var = "";
 		String expression = "";
@@ -42,12 +58,31 @@ public class Coreassign {
 		}
 
 		var = var.trim();
-		expression = expression.trim();
+		System.out.println("var==="+var);
+		try {
+			FinalException.checkScope(var);
+		} catch (Exception e) {
+			System.out.println(e.toString());
+			System.exit(0);
+		}
 
+		expression = expression.trim();
+		//System.out.println("expresssssion=="+expression);
+		
+		
 		if (Coredeclare.inttype_map.containsKey(var) == true) {
 			if (Corescope.scope_variables.contains(var) == true) {
 				if (checkInt(Evaluator.evaluate(expression))) {
-					int result =(int) Double.parseDouble(Evaluator.evaluate(expression));
+					int result = (int) Double.parseDouble(Evaluator.evaluate(expression));
+				//	System.out.println("ressssssssullllllllllllllllttttttt=="+result);
+					try {
+						FinalException.checkDatatype(var,Integer.toString(result));
+					} catch (Exception e) {
+						System.out
+								.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+										+ e.toString());
+						System.exit(0);
+					}
 					Coredeclare.inttype_map.replace(var, result);
 				} else {
 					// throw of error of providing a suitable type casting to convert double to int
@@ -59,6 +94,14 @@ public class Coreassign {
 																			// coredeclare.java
 			if (Corescope.scope_variables.contains(var) == true) {
 				double dresult = Double.parseDouble(Evaluator.evaluate(expression));
+				try {
+					FinalException.checkDatatype(var, Evaluator.evaluate(expression));
+				} catch (Exception e) {
+					System.out
+							.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+									+ e.toString());
+					System.exit(0);
+				}
 				Coredeclare.doubletype_map.replace(var, dresult);
 			} else {
 				// throw error of scope
@@ -66,8 +109,17 @@ public class Coreassign {
 		} else if (Coredeclare.stringtype_map.containsKey(var) == true) {// check the name of string type map in
 																			// coredeclare.java
 			if (Corescope.scope_variables.contains(var) == true) {
-				System.out.println("expppppppppppppppp" + expression);
+			//	System.out.println("expppppppppppppppp" + expression);
 				String sresult = getConcatenatedString(expression);
+				String ssresult="\""+sresult+"\"";
+				try {
+					FinalException.checkDatatype(var, ssresult);
+				} catch (Exception e) {
+					System.out
+							.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+									+ e.toString());
+					System.exit(0);
+				}
 				Coredeclare.stringtype_map.replace(var, sresult);
 			} else {
 				// throw error of scope
@@ -107,7 +159,7 @@ public class Coreassign {
 					if (s_exp.length() != 0) {
 						if (checkDigit(Evaluator.evaluate(s_exp))) {
 							if (checkInt(Evaluator.evaluate(s_exp))) {
-								s_final = s_final +(int) Double.parseDouble(Evaluator.evaluate(s_exp));
+								s_final = s_final + (int) Double.parseDouble(Evaluator.evaluate(s_exp));
 							} else {
 								s_final = s_final + Double.parseDouble(Evaluator.evaluate(s_exp));
 							}

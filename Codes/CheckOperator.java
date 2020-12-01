@@ -1,25 +1,27 @@
 package exceptionhandle;
 import java.util.*;
 import java.io.*;
+import datatypes.Coredeclare;
 
-public class Checkscope extends Exception {
+public class CheckOperator extends Exception {
     
 
     /**
 	 *
 	 */
     private static final long serialVersionUID = 1L;
-    String s="";
+	String exp="";
    
-    Checkscope(String s)
+    CheckOperator(String exp)
     {
-        this.s=s;
+		this.exp=exp;
     }
     public String toString()
     {
-       
-        return("variable \""+s+"\" is not declared");
+        return(exp+" Not a valid Exprssion!!!");
+        
     }
+
 // checkscope(String exceptionText)
 // {
 //    // super(exceptionText);

@@ -2,24 +2,25 @@ package exceptionhandle;
 import java.util.*;
 import java.io.*;
 
-public class Checkscope extends Exception {
+public class CheckSemicolon extends Exception {
     
 
     /**
 	 *
 	 */
     private static final long serialVersionUID = 1L;
-    String s="";
+	String exp="";
    
-    Checkscope(String s)
+    CheckSemicolon(String exp)
     {
-        this.s=s;
+		this.exp=exp;
     }
     public String toString()
     {
-       
-        return("variable \""+s+"\" is not declared");
+    return("SemiColon error in the following line: "+exp+" <---------");
+    
     }
+    
 // checkscope(String exceptionText)
 // {
 //    // super(exceptionText);
@@ -29,4 +30,4 @@ public class Checkscope extends Exception {
 //lIKE this, rest of the exception classes will be created in different java files. 
 //then there will be a parent final exception class in which we will make various functions which will throw various exceptions
 //then from various files we will call functions from that parent exception classes.
-//THATS IT!!!!
+//THATS IT!!!!l

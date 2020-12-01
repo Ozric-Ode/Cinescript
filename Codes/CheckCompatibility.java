@@ -1,25 +1,31 @@
 package exceptionhandle;
 import java.util.*;
 import java.io.*;
+import datatypes.Coredeclare;
 
-public class Checkscope extends Exception {
+public class CheckCompatibility  extends Exception 
+{
     
 
     /**
 	 *
 	 */
     private static final long serialVersionUID = 1L;
-    String s="";
+	String var1="";
+	String var2="";
    
-    Checkscope(String s)
+    CheckCompatibility(String var1,String var2)
     {
-        this.s=s;
+		this.var1=var1;
+		this.var2=var2;
     }
     public String toString()
     {
-       
-        return("variable \""+s+"\" is not declared");
+    
+       return("Both "+var1+" and "+var2+" are not compatible together");
+        
     }
+
 // checkscope(String exceptionText)
 // {
 //    // super(exceptionText);
