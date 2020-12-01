@@ -23,8 +23,6 @@ public class Coreassign {
 	}
 
 	public static void coreassign(String str) {
-		
-	
 
 		String var = "";
 		String expression = "";
@@ -45,23 +43,26 @@ public class Coreassign {
 		}
 
 		var = var.trim();
-//string a                a
-		try
-		{
-		FinalException.checkScope(var);
-		}
-		catch(Exception e)
-		{
+		try {
+			FinalException.checkScope(var);
+		} catch (Exception e) {
 			System.out.println(e.toString());
 			System.exit(0);
 		}
 
 		expression = expression.trim();
-
+		try {
+			FinalException.checkDatatype(var, expression);
+		} catch (Exception e) {
+			System.out
+					.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+							+ e.toString());
+			System.exit(0);
+		}
 		if (Coredeclare.inttype_map.containsKey(var) == true) {
 			if (Corescope.scope_variables.contains(var) == true) {
 				if (checkInt(Evaluator.evaluate(expression))) {
-					int result =(int) Double.parseDouble(Evaluator.evaluate(expression));
+					int result = (int) Double.parseDouble(Evaluator.evaluate(expression));
 					Coredeclare.inttype_map.replace(var, result);
 				} else {
 					// throw of error of providing a suitable type casting to convert double to int
@@ -121,7 +122,7 @@ public class Coreassign {
 					if (s_exp.length() != 0) {
 						if (checkDigit(Evaluator.evaluate(s_exp))) {
 							if (checkInt(Evaluator.evaluate(s_exp))) {
-								s_final = s_final +(int) Double.parseDouble(Evaluator.evaluate(s_exp));
+								s_final = s_final + (int) Double.parseDouble(Evaluator.evaluate(s_exp));
 							} else {
 								s_final = s_final + Double.parseDouble(Evaluator.evaluate(s_exp));
 							}
