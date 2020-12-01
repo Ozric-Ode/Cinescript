@@ -94,11 +94,6 @@ public class FinalException {
             throw new CheckOperator(s);
             // else
             // checkDatatype( arr[0], arr[1]);
-
-
-
-            
-
         }
     }
 

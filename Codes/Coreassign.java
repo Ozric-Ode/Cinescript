@@ -23,11 +23,18 @@ public class Coreassign {
 	}
 
 	public static void coreassign(String str) {
+	//	System.out.println("#################"+str);
 		try{
 			FinalException.checkSemicolon(str);
 		}
 		catch(Exception e)
 		{
+			System.out.println(e.toString());
+			System.exit(0);
+		}
+		try {
+			FinalException.checkOperator(str);
+		} catch (Exception e) {
 			System.out.println(e.toString());
 			System.exit(0);
 		}
@@ -59,6 +66,8 @@ public class Coreassign {
 		}
 
 		expression = expression.trim();
+		//System.out.println("expresssssion=="+expression);
+		
 		
 		if (Coredeclare.inttype_map.containsKey(var) == true) {
 			if (Corescope.scope_variables.contains(var) == true) {
