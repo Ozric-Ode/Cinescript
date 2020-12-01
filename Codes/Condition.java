@@ -1,4 +1,5 @@
 package features;
+import java.util.*;
 import datatypes.Coreverify;
 import services.Precore;
 
@@ -33,6 +34,13 @@ public class Condition extends Exception{
 		String symbol="";
 		String var2="";
 		int j=0;
+		Set<String> set = new HashSet<String>();
+		set.add("==");
+		set.add("!=");
+		set.add(">");
+		set.add("<=");
+		set.add(">=");
+		set.add("<");
 		while(j!=data.length()-1){
 			if(data.charAt(j)!='>'&& data.charAt(j)!='<' && data.charAt(j)!='='&& data.charAt(j)!='!' )
 				{
@@ -87,6 +95,7 @@ public class Condition extends Exception{
 				//result1=Evaluator.evaluate(var1);
 				System.out.println("String found");
 			}
+			if(set.contains(symbol)){
 			switch(symbol){
 				case  "<": return (result1<result2);
 				case ">":return (result1>result2);
@@ -94,13 +103,16 @@ public class Condition extends Exception{
 				case "!=":return (result1!=result2);
 				case ">=":return (result1>=result2);
 				case "<=":return (result1<=result2);
-				default: return false;
+			}}
+			else{
+				System.out.println(symbol+"->operand undefined");
+				System.exit(0);
 			}
 		}
 		else{
 			if(symbol.compareTo("==")==0 && var1.compareTo(var2)==0)
 				return true;
+			}
 			return false;
 		}
-	}
 }

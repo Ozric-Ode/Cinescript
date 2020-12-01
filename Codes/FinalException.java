@@ -25,7 +25,7 @@ public class FinalException {
             int fl=0;int fl2=0;
             for(int i=0;i<exp.length();i++)
             {
-                if(exp.charAt(i)>='0'&&exp.charAt(i)<='9')
+                if(exp.charAt(i)>='0'&exp.charAt(i)<='9')
                 fl++;
                 else if(exp.charAt(i)=='.')
                 fl2++;
@@ -56,6 +56,50 @@ public class FinalException {
 
         }
         
+    }
+
+    public static void checkSemicolon(String str)throws CheckSemicolon 
+    {
+        int fl=0;
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)==';')
+            fl++;
+        }
+        if(fl!=1||str.charAt(str.length()-1)!=';')
+        {
+          
+        throw new CheckSemicolon(str);
+        }
+    }
+    public static void checkOperator(String s)throws CheckOperator
+    {
+        Set<String>st=new HashSet<String>();
+        // st.add("+");st.add("-");st.add("*");st.add("/");
+        // st.add("<=");st.add(">=");st.add("!=");st.add("==");
+        // st.add(">");st.add("<");
+        int fl=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)=='=')fl++;
+        }
+        if(fl!=1)
+        {
+            throw new CheckOperator(s);
+        }
+        else
+        {
+            String arr[]=s.split("=");
+            if(arr.length!=2)
+            throw new CheckOperator(s);
+            // else
+            // checkDatatype( arr[0], arr[1]);
+
+
+
+            
+
+        }
     }
 
     

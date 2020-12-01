@@ -23,6 +23,14 @@ public class Coreassign {
 	}
 
 	public static void coreassign(String str) {
+		try{
+			FinalException.checkSemicolon(str);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.toString());
+			System.exit(0);
+		}
 
 		String var = "";
 		String expression = "";
@@ -51,18 +59,20 @@ public class Coreassign {
 		}
 
 		expression = expression.trim();
-		try {
-			FinalException.checkDatatype(var, expression);
-		} catch (Exception e) {
-			System.out
-					.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
-							+ e.toString());
-			System.exit(0);
-		}
+		
 		if (Coredeclare.inttype_map.containsKey(var) == true) {
 			if (Corescope.scope_variables.contains(var) == true) {
 				if (checkInt(Evaluator.evaluate(expression))) {
 					int result = (int) Double.parseDouble(Evaluator.evaluate(expression));
+				//	System.out.println("ressssssssullllllllllllllllttttttt=="+result);
+					try {
+						FinalException.checkDatatype(var,Integer.toString(result));
+					} catch (Exception e) {
+						System.out
+								.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+										+ e.toString());
+						System.exit(0);
+					}
 					Coredeclare.inttype_map.replace(var, result);
 				} else {
 					// throw of error of providing a suitable type casting to convert double to int
@@ -74,6 +84,14 @@ public class Coreassign {
 																			// coredeclare.java
 			if (Corescope.scope_variables.contains(var) == true) {
 				double dresult = Double.parseDouble(Evaluator.evaluate(expression));
+				try {
+					FinalException.checkDatatype(var, Evaluator.evaluate(expression));
+				} catch (Exception e) {
+					System.out
+							.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+									+ e.toString());
+					System.exit(0);
+				}
 				Coredeclare.doubletype_map.replace(var, dresult);
 			} else {
 				// throw error of scope
@@ -81,8 +99,16 @@ public class Coreassign {
 		} else if (Coredeclare.stringtype_map.containsKey(var) == true) {// check the name of string type map in
 																			// coredeclare.java
 			if (Corescope.scope_variables.contains(var) == true) {
-				System.out.println("expppppppppppppppp" + expression);
+			//	System.out.println("expppppppppppppppp" + expression);
 				String sresult = getConcatenatedString(expression);
+				try {
+					FinalException.checkDatatype(var, sresult);
+				} catch (Exception e) {
+					System.out
+							.println("--0987654321qwertyuioplkjhgfdsazxy[;.p;/8o.987234985--=-=-=-=-=-=-=-=-=-1-1-`--`-`--`-`-"
+									+ e.toString());
+					System.exit(0);
+				}
 				Coredeclare.stringtype_map.replace(var, sresult);
 			} else {
 				// throw error of scope

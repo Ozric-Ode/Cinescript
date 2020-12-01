@@ -10,6 +10,15 @@ public class Coredeclare {
     public static Map<String, Double> doubletype_map = new HashMap<String, Double>();
     Set<Character> deli = new HashSet<Character>();
     public void declare(String dec) {
+        
+        try{
+			FinalException.checkSemicolon(dec);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.toString());
+			System.exit(0);
+		}
         //////////////////////////////////////////////
         
         deli.add(' ');

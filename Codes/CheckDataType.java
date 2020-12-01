@@ -30,7 +30,7 @@ public class CheckDataType extends Exception {
             return(str+"Expression \""+exp+"\" can't be stored in double type data type.");
         }
         else {
-            str="The variable \""+var+"\" is not compatible to hold  expression"+exp+".\n";
+            str="The variable \""+var+"\" is not compatible to hold  expression "+exp+".\n";
             return(str+"Expression "+exp+" can't be stored in String type data type. Use double quotes in expression.");
         }
     }

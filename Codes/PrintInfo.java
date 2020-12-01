@@ -6,6 +6,7 @@ import java.io.IOException; // Import the IOException class to handle errors
 
 import features.*;
 import services.Precore;
+import exceptionhandle.FinalException;
 
 public class PrintInfo {
 
@@ -26,7 +27,9 @@ public class PrintInfo {
 	}
 
 	public static void print(String s) {
-		System.out.println(s + "###");
+
+		
+		//System.out.println(s + "###");
 
 		// , ====> Concatenation
 		// " " ===> String in print function
