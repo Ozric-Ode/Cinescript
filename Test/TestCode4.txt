@@ -1,20 +1,4 @@
-if( 112<=31 ){
-	elaan("Hello");
-}
-welse{
-	elaan("Bye");
-}
-if(31<311){
-	elaan("ji");
-}
 
-
-warna{
-elaan("Bye");
-}
-agartummiljao(31<311){
-elaan("ji");
-}
 
 agartummiljao( 112<=31 ){
 elaan("Hello");

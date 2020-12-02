@@ -1,0 +1,1 @@
+ekdoteen a = 5;

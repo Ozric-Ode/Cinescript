@@ -5,7 +5,7 @@
 ### Keywords for this language Cinescript are named on bollywood movies/songs.These are:
 #### Print - elaan
 #### Next line - nayadaur
-#### Loop - samaykapahiya
+#### Loop - jabtakhaijaan
 #### Conditional if - agartummiljao
 #### else - warna
 #### true - satyamevjayate

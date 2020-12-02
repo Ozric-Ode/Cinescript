@@ -1,4 +1,31 @@
-7427
-7427
-7427
-7427
+beyyyyheyyyy 0 5
+beyyyyheyyyy 0 5
+beyyyyheyyyy 0 5
+0
+beyyyyheyyyy 0 5
+0
+ s4 = 1
+ s4 = 2
+ s4 = 3
+ s4 = 4
+ s4 = 5
+beyyyyheyyyy 0 5
+0
+ s4 = 1
+ s4 = 2
+ s4 = 3
+heyyyy beyyyy 3
+ s4 = 4
+ s4 = 5
+beyyyyheyyyy 0.01 5
+0.01
+ s4 = 0.51
+ s4 = 1.01
+ s4 = 1.51
+ s4 = 2.01
+ s4 = 2.51
+ s4 = 3.01
+ s4 = 3.51
+ s4 = 4.01
+ s4 = 4.51
+ s4 = 5.01

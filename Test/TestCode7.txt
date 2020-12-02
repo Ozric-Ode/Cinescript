@@ -1,0 +1,24 @@
+ekdoteen a = 1;
+ekdoteen b = 1;
+
+jabtakhaijaan( a <= 5 ) 
+{
+    elaan("This is our a =", a);
+    elaan("This is our b =", b);
+    b =1;
+    jabtakhaijaan( b <= 5 ) 
+{
+    elaan("Nested This is our a =",a);
+    elaan("Nested This is our b =",b);
+    
+  
+    
+    b = 1 + b;
+}
+  
+    
+    a = 1 + a;
+}
+elaan("the value is",a);
+
+elaan("the value is", 1000);
