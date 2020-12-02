@@ -79,6 +79,8 @@ public class Coreverify {
         set.add("/");
         set.add("*");
         set.add("%");
+        set.add("(");
+        set.add(")");
         String newdata = "";
 
         for (int i = 0; i < data.length(); i++) {
