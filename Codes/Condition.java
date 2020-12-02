@@ -25,7 +25,7 @@ public class Condition extends Exception{
 
 
 	public static boolean checkCondition(String data){
-		System.out.println("dataaaaaaaaaaaaadaaaaaaaaaaaaaaaaataaaaaaaaaa"+data);
+		System.out.println("dataaaaaaaaaaaaadaaaaaaaaaaaaaaaaataaaaaa998765432234567098765423456789aaaa"+data);
 		data=Precore.correctString(data);
 		try{
 			FinalException.checkCondition(data);
@@ -49,7 +49,13 @@ public class Condition extends Exception{
 		set.add("<");
 		//////////////////////
 		System.out.println("dataaaaaaaaaaaaa"+data);
-		while(j!=data.length()-1){
+		int k=0;
+		if(data.charAt(data.length()-1)=='{'){
+			System.out.println("jdjdjdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+		k=1;
+		}
+		/////idhar ghuss rhaa haiiiiiiiiiiiiiiiiiiiiii
+		while(j!=data.length()-k){
 			if(data.charAt(j)!='>'&& data.charAt(j)!='<' && data.charAt(j)!='='&& data.charAt(j)!='!' )
 				{
 					if(symbol.length()==0 )
@@ -62,21 +68,27 @@ public class Condition extends Exception{
 				if(data.charAt(j)=='='){
 					symbol+=data.charAt(j++);
 				}
-			}			
+			}
+						
 		}
 
 		var1=var1.trim();
 		var2=var2.trim();
-
+		System.out.println("ddddddd+++"+var1+"---------ddddddd++"+var2+"!!!!!!"+FinalException.compat(var2));
 		if(FinalException.compat(var1)!=3)
 		var1=cv.verify(var1);
 		if(FinalException.compat(var2)!=3)
 		var2=cv.verify(var2);
+		System.out.println("ddddddd+++"+var1+"---------ddddddd++"+var2+"!!!!!!"+FinalException.compat(var2));
+
+		
 		var1=var1.trim();
 		var2=var2.trim();
-		
-		
-	//	System.out.println("ddddddd+++"+var1+"---------ddddddd++"+var2+"!!!!!!"+FinalException.compat(var2));
+		var1=Evaluator.evaluate(var1);
+		var2=Evaluator.evaluate(var2);
+
+
+		System.out.println("ddddddd+++"+var1+"---------ddddddd++"+var2+"!!!!!!"+FinalException.compat(var2));
 		///////////////////////////////////////
 		try {
 			FinalException.checkConditionType(var1,var2);

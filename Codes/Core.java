@@ -96,13 +96,26 @@ public class Core {
                     i++;
 
                 } else if (keyword.charAt(0) == 'a') {
+                    int k =1;
                     data2 += keyword;
-                    while (data.charAt(i) != ')') {
+                    data2 += '(';
+                    i++;
+                    while (k!=0) {
+                        System.out.println("k == "+ k);
+                        if(data.charAt(i) == ')')
+                        {
+                            k--;
+                        }else if(data.charAt(i) == '(')
+                        {
+                            k++;
+                        }
+                        
                         data2 += data.charAt(i);
                         i++;
                     }
-                    data2 += ')';
-                    i++;
+                    System.out.println("dataaaaaa 2 ====="+data2);
+                    //data2 += ')';
+                   // i++;
                     data2 += '{';
                     String str2 = data.substring(i);
                     String ext_str2 = Precore.extract(str2);
@@ -112,6 +125,7 @@ public class Core {
                     data2 += ext_str2;
                     i += len2 + 2;
                     data2 += '}';
+                    System.out.println("the if condition===>"+data2);
                     if (i < data.length() && data.charAt(i) == 'w') {
 
                         keyword = "";
@@ -124,7 +138,7 @@ public class Core {
                         if (set.contains(keyword)) {
                             data2 += keyword;
 
-                            data2 += '{';
+                            data2 += '{';//here it is commented by vidit
                             str2 = data.substring(i);
                             String ext_str = Precore.extract(str2);
                             Precore.scope = Precore.scope - 1;
@@ -133,7 +147,7 @@ public class Core {
                             len2 = ext_str.length();
                             data2 += ext_str;
                             i += len2 + 2;
-                            data2 += '}';
+                            data2 += '}';//here it is commented by vidit
                         }
                     }
                     // System.out.println(data2 + " $$$");
@@ -175,13 +189,26 @@ public class Core {
                 } else if (keyword.equals("jabtakhaijaan")) 
                 {
                     System.out.println("In while");
+                    int k =1;
                     data2 += keyword;
-                    while (data.charAt(i) != ')') {
+                    data2 += '(';
+                    i++;
+                    while (k!=0) {
+                        System.out.println("k == "+ k);
+                        if(data.charAt(i) == ')')
+                        {
+                            k--;
+                        }else if(data.charAt(i) == '(')
+                        {
+                            k++;
+                        }
+                        
                         data2 += data.charAt(i);
                         i++;
                     }
-                    data2 += ')';
-                    i++;
+                    System.out.println("dataaaaaa 2 ====="+data2);
+                    // data2 += ')';
+                    // i++;
                     data2 += '{';
                     String str2 = data.substring(i);
                     String ext_str2 = Precore.extract(str2);

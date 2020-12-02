@@ -42,7 +42,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-            File myObj = new File("..\\Test\\TestCode9.txt");
+            File myObj = new File("..\\Test\\TestCode3.txt");
             // try {
             // FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt",true);
             // writer.write("");
@@ -78,8 +78,9 @@ public class Input {
                 }
             }
             System.out.println(code);
+
             //System.out.println(newcode);
-            // core.command(newcode);
+             core.command(code);
             // cs.Removescope();
             //
 

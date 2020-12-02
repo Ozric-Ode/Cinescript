@@ -89,9 +89,10 @@ public class FinalException {
     
     public static void checkConditionType(String var1,String var2)throws CheckCompatibility
     {
-        System.out.println("var2=="+var2);
+        //System.out.println("var2=="+var2);
         
-       // System.out.println("compatibilityyyyyyyyyyyyyy "+var1+ " "+var2+compat(var1)+ " "+compat("higg") );
+        
+      //  System.out.println("compatibilityyyyyyyyyyyyyy "+var1+ " "+var2+compat(var1)+ " "+compat(var2) );
         if((compat(var1)!=compat(var2))||compat(var1)==4)
         throw new CheckCompatibility(var1,var2);
     }
@@ -147,12 +148,14 @@ public class FinalException {
         
 
 int fl=0;   int g=0;
+String l1="",l2="";
         for(int i=0;i<s.length()-1;i++)
         {
             String ab="";
              ab=ab+s.charAt(i)+s.charAt(i+1);
              if(st.contains(ab))
              {
+                 l2=ab;
                  fl++;
              }
 
@@ -163,13 +166,31 @@ int fl=0;   int g=0;
              ab=ab+s.charAt(i);
              if(st1.contains(ab))
              {
+                 l1=ab;
+                 System.out.println("s-->>>"+s);
                  g++;
              }
 
         } 
 
+        System.out.println("fl==="+fl+"g==="+g);
+
         if(fl+g!=1)
-        throw new CheckCondition(s);
+        {
+            System.out.println("l1==="+l1+"l2==="+l2+"###");
+            if(!((l1.equals("<")&&l2.equals("<="))||(l1.equals(">")&&l2.equals(">="))))
+            {
+                // if(l1.equals("<")&&l2.equals("<="))
+                // System.out.println("BRAVO");
+                throw new CheckCondition(s);
+            }
+
+        }
+        // {
+        // }
+        // !(l2.contains(l1)))
+        
+        
     }
 
     
