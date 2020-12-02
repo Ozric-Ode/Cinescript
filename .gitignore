@@ -2,3 +2,4 @@ Codes/features/*.class
 Codes/filehandling/*.class
 Codes/services/*.class
 Codes/datatypes/*.class
+Codes/exceptionhandle/*.class

@@ -3,6 +3,6 @@
 agartummiljao( 112<=31 ){
 elaan("Hello");
 }
-warna{
+warna{}
 elaan("Bye");
 }

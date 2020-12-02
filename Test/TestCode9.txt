@@ -1,0 +1,6 @@
+ekdoteen a = 1;
+elaan(a);
+agartummiljao( 1<2 ) {
+    a = a+1;
+    elaan("Hi Bye",a);
+}
