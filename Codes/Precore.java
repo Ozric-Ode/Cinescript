@@ -44,17 +44,23 @@ public class Precore {
         for(int i=0;i<exp.length();i++){
             // System.out.println(exp.charAt(i));
             if(characters.contains(Character.toString(exp.charAt(i)))){
-              scorrected+= exp.charAt(i);
+                if(exp.charAt(i)=='(')
+                scorrected+=exp.charAt(i);
+                else
+              scorrected+=" "+ exp.charAt(i);
                if(i+1<exp.length() && exp.charAt(i+1)=='='){
                    scorrected+=exp.charAt(i+1)+" ";
                    i++;
                }
+               if(exp.charAt(i)!=')')
                scorrected+=" ";
+               
             }
             else{
-                scorrected+=exp.charAt(i)+" ";
+                scorrected+=exp.charAt(i);
             }
         }
+
         System.out.println(scorrected);
         return scorrected;
     }

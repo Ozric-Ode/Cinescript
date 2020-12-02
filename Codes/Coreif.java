@@ -20,7 +20,7 @@ public class Coreif {
                 break;
             }
         }
-        // System.out.println("ind=="+ ind);
+         System.out.println("ind==>>>>>>>>>>>>>>>>>>>>>>>>>>>===="+ ind);
         String sfinal = "";
         int k = 1;
         for (int i = ind + 1; i < s.length(); i++) {
@@ -36,12 +36,14 @@ public class Coreif {
         }
         k = 0;
         boolean cnd = false;
-        // System.out.println(sfinal);
+         System.out.println("sfinal to go-----+++++++++++++++++++++++++++----------ftyhfgvyukvy"+sfinal);
         cnd = Condition.checkCondition(sfinal);
         return cnd;
     }
 
     public void process(String data) {
+
+        System.out.println("sdata fur cureif to go-----+++++++++++++++++++++++++++----------ftyhfgvyukvy"+data);
         // System.out.println(data);
         boolean cnd = extract_condition(data);
         int ind = 0;

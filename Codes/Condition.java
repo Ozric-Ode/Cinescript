@@ -25,7 +25,7 @@ public class Condition extends Exception{
 
 
 	public static boolean checkCondition(String data){
-		System.out.println("dataaaaaaaaaaaaadaaaaaaaaaaaaaaaaataaaaaaaaaa"+data);
+		System.out.println("dataaaaaaaaaaaaadaaaaaaaaaaaaaaaaataaaaaa998765432234567098765423456789aaaa"+data);
 		data=Precore.correctString(data);
 		try{
 			FinalException.checkCondition(data);

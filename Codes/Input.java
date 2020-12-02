@@ -78,8 +78,9 @@ public class Input {
                 }
             }
             System.out.println(code);
+
             //System.out.println(newcode);
-            // core.command(newcode);
+             core.command(code);
             // cs.Removescope();
             //
 
