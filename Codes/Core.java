@@ -267,7 +267,29 @@ public class Core {
 
                 }
 
-            } else {
+            }
+            
+
+            else {
+
+                int flg=0;
+                System.out.println("-0987654321`1234567890-=-09876=============DATA=============="+keyword.substring(flg));
+                String strr="";
+                while(keyword.charAt(flg)!='=')
+                {strr=strr+keyword.charAt(flg);flg++;}
+                System.out.println("-0987654321`1234567890-=-09876==========================="+strr);
+                strr=strr.trim();
+
+                if(strr.split(" ").length!=1)
+                {
+                    System.out.println("KEYWORD ERROR FOUND!!");
+                    System.exit(0);
+                }//for keyword error.
+//
+                else
+                {
+                /////////////////////////////////
+
                 String data3 = "";
                 data3 += keyword;
                 while (data.charAt(i) != ';') {
@@ -278,7 +300,7 @@ public class Core {
                 i++;
                 System.out.println(data3 + "$$$$");
                 Coreassign.coreassign(data3);
-
+            }
             }
             // System.out.println(i+" "+data.length());
 

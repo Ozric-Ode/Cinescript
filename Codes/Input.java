@@ -71,7 +71,7 @@ public class Input {
             System.out.println(code);
             String newcode = "";
             for (int i = 0; i < code.length(); i++) {
-                if (code.charAt(i) == ')' || code.charAt(i) == '}' || code.charAt(i) == '{' || code.charAt(i) == '(') {
+                if (code.charAt(i) == ')' || code.charAt(i) == '}' || code.charAt(i) == '{' || code.charAt(i) == '(' || code.charAt(i) == '=') {
                     code = removespace(code, i);
                     i = i-extraspace;
 
