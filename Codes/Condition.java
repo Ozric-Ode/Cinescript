@@ -72,6 +72,8 @@ public class Condition extends Exception{
 		var1=cv.verify(var1);
 		if(FinalException.compat(var2)!=3)
 		var2=cv.verify(var2);
+		var1=var1.trim();
+		var2=var2.trim();
 		
 		
 	//	System.out.println("ddddddd+++"+var1+"---------ddddddd++"+var2+"!!!!!!"+FinalException.compat(var2));
