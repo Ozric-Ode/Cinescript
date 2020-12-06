@@ -7,14 +7,14 @@ import exceptionhandle.*;
 public class Condition extends Exception{
 
 
-	static boolean checkDigit(String data) {
+	private static boolean checkDigit(String data) {
 		boolean numeric = true;
 
 		numeric = data.matches("-?\\d+(\\.\\d+)?");
 		return numeric;
 	}
 
-	static boolean checkInt(String data) {
+	private static boolean checkInt(String data) {
 		double d = Double.parseDouble(data);
 		if (Math.ceil(d) == Math.floor(d)) {
 			return true;
@@ -25,7 +25,7 @@ public class Condition extends Exception{
 
 
 	public static boolean checkCondition(String data){
-		System.out.println("dataaaaaaaaaaaaadaaaaaaaaaaaaaaaaataaaaaa998765432234567098765423456789aaaa"+data);
+		//System.out.println("dataaaaaaaaaaaaadaaaaaaaaaaaaaaaaataaaaaa998765432234567098765423456789aaaa"+data);
 		data=Precore.correctString(data);
 		try{
 			FinalException.checkCondition(data);
@@ -48,10 +48,10 @@ public class Condition extends Exception{
 		set.add(">=");
 		set.add("<");
 		//////////////////////
-		System.out.println("dataaaaaaaaaaaaa"+data);
+		//System.out.println("dataaaaaaaaaaaaa"+data);
 		int k=0;
 		if(data.charAt(data.length()-1)=='{'){
-			System.out.println("jdjdjdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
+			//System.out.println("jdjdjdjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
 		k=1;
 		}
 		/////idhar ghuss rhaa haiiiiiiiiiiiiiiiiiiiiii

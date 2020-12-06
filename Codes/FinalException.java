@@ -2,7 +2,7 @@ package exceptionhandle;
 
 import java.util.*;
 import datatypes.Coredeclare;
-import exceptionhandle.CheckDataType;
+//import exceptionhandle.CheckDataType;
 //import various things.
 public class FinalException {
 

@@ -10,19 +10,31 @@ import services.*;
 
 public class Input {
 
-    static int extraspace = 0;
+    private static int extraspace = 0;
+
+    private static int checkbrackets(String data) {
+        int k = 0;
+        for (int i = 0; i < data.length(); i++) {
+            if (data.charAt(i) == '{') {
+                k++;
+            } else if (data.charAt(i) == '}') {
+                k--;
+            }
+        }
+        return k;
+    }
 
     public static String removespace(String data, int index) {
         String newdata = "";
         extraspace = 0;
         newdata = newdata + data.charAt(index);
         int j = index - 1;
-        while (j>=0 && data.charAt(j) == ' ') {
+        while (j >= 0 && data.charAt(j) == ' ') {
             extraspace++;
             j--;
         }
         int k = index + 1;
-        while (k<data.length() && data.charAt(k) == ' ') {
+        while (k < data.length() && data.charAt(k) == ' ') {
 
             k++;
         }
@@ -42,7 +54,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-            File myObj = new File("..\\Test\\TestCode8.txt");
+            File myObj = new File("..\\Test\\TestCode4.txt");
             // try {
             // FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt",true);
             // writer.write("");
@@ -71,16 +83,22 @@ public class Input {
             System.out.println(code);
             String newcode = "";
             for (int i = 0; i < code.length(); i++) {
-                if (code.charAt(i) == ')' || code.charAt(i) == '}' || code.charAt(i) == '{' || code.charAt(i) == '(' || code.charAt(i) == '=') {
+                if (code.charAt(i) == ')' || code.charAt(i) == '}' || code.charAt(i) == '{' || code.charAt(i) == '(') {
                     code = removespace(code, i);
-                    i = i-extraspace;
+                    i = i - extraspace;
 
                 }
             }
             System.out.println(code);
 
-            //System.out.println(newcode);
-             core.command(code);
+            // System.out.println(newcode);
+            if (checkbrackets(code)==0) {
+                core.command(code);
+            }else if(checkbrackets(code)<0){
+                System.out.println("Opening curly braces '{' is missing.");
+            }else{
+                System.out.println("Closing curly braces '}' is missing.");
+            }
             // cs.Removescope();
             //
 

@@ -6,7 +6,7 @@ import datatypes.*;
 import exceptionhandle.FinalException;
 public class Core {
     /////////////////////////////////////////////////////////////////////////////////////////////
-    public static void PrintStackint(Stack<Integer> s) {
+    private static void PrintStackint(Stack<Integer> s) {
         Stack<Integer> temp = new Stack<Integer>();
 
         while (s.empty() == false) {
@@ -25,7 +25,7 @@ public class Core {
         }
     }
 
-    public static void PrintStack(Stack<String> s) {
+    private static void PrintStack(Stack<String> s) {
         Stack<String> temp = new Stack<String>();
 
         while (s.empty() == false) {
