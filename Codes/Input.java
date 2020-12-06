@@ -54,7 +54,7 @@ public class Input {
     public static void main(String[] args) {
         Core core = new Core();
         try {
-            File myObj = new File("..\\Test\\TestCode4.txt");
+            File myObj = new File("..\\Test\\TestCode.txt");
             // try {
             // FileWriter writer = new FileWriter("..\\Test\\OutputFile.txt",true);
             // writer.write("");

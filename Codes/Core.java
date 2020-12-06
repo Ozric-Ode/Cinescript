@@ -1,3 +1,5 @@
+
+
 package services;
 
 import java.util.*;
@@ -6,7 +8,7 @@ import datatypes.*;
 import exceptionhandle.FinalException;
 public class Core {
     /////////////////////////////////////////////////////////////////////////////////////////////
-    private static void PrintStackint(Stack<Integer> s) {
+    public static void PrintStackint(Stack<Integer> s) {
         Stack<Integer> temp = new Stack<Integer>();
 
         while (s.empty() == false) {
@@ -25,7 +27,7 @@ public class Core {
         }
     }
 
-    private static void PrintStack(Stack<String> s) {
+    public static void PrintStack(Stack<String> s) {
         Stack<String> temp = new Stack<String>();
 
         while (s.empty() == false) {
@@ -96,26 +98,13 @@ public class Core {
                     i++;
 
                 } else if (keyword.charAt(0) == 'a') {
-                    int k =1;
                     data2 += keyword;
-                    data2 += '(';
-                    i++;
-                    while (k!=0) {
-                        System.out.println("k == "+ k);
-                        if(data.charAt(i) == ')')
-                        {
-                            k--;
-                        }else if(data.charAt(i) == '(')
-                        {
-                            k++;
-                        }
-                        
+                    while (data.charAt(i) != ')') {
                         data2 += data.charAt(i);
                         i++;
                     }
-                    System.out.println("dataaaaaa 2 ====="+data2);
-                    //data2 += ')';
-                   // i++;
+                    data2 += ')';
+                    i++;
                     data2 += '{';
                     String str2 = data.substring(i);
                     String ext_str2 = Precore.extract(str2);
@@ -125,7 +114,6 @@ public class Core {
                     data2 += ext_str2;
                     i += len2 + 2;
                     data2 += '}';
-                    System.out.println("the if condition===>"+data2);
                     if (i < data.length() && data.charAt(i) == 'w') {
 
                         keyword = "";
@@ -138,7 +126,7 @@ public class Core {
                         if (set.contains(keyword)) {
                             data2 += keyword;
 
-                            data2 += '{';//here it is commented by vidit
+                            data2 += '{';
                             str2 = data.substring(i);
                             String ext_str = Precore.extract(str2);
                             Precore.scope = Precore.scope - 1;
@@ -147,7 +135,7 @@ public class Core {
                             len2 = ext_str.length();
                             data2 += ext_str;
                             i += len2 + 2;
-                            data2 += '}';//here it is commented by vidit
+                            data2 += '}';
                         }
                     }
                     // System.out.println(data2 + " $$$");
@@ -189,26 +177,13 @@ public class Core {
                 } else if (keyword.equals("jabtakhaijaan")) 
                 {
                     System.out.println("In while");
-                    int k =1;
                     data2 += keyword;
-                    data2 += '(';
-                    i++;
-                    while (k!=0) {
-                        System.out.println("k == "+ k);
-                        if(data.charAt(i) == ')')
-                        {
-                            k--;
-                        }else if(data.charAt(i) == '(')
-                        {
-                            k++;
-                        }
-                        
+                    while (data.charAt(i) != ')') {
                         data2 += data.charAt(i);
                         i++;
                     }
-                    System.out.println("dataaaaaa 2 ====="+data2);
-                    // data2 += ')';
-                    // i++;
+                    data2 += ')';
+                    i++;
                     data2 += '{';
                     String str2 = data.substring(i);
                     String ext_str2 = Precore.extract(str2);
@@ -267,29 +242,7 @@ public class Core {
 
                 }
 
-            }
-            
-
-            else {
-
-                int flg=0;
-                System.out.println("-0987654321`1234567890-=-09876=============DATA=============="+keyword.substring(flg));
-                String strr="";
-                while(keyword.charAt(flg)!='=')
-                {strr=strr+keyword.charAt(flg);flg++;}
-                System.out.println("-0987654321`1234567890-=-09876==========================="+strr);
-                strr=strr.trim();
-
-                if(strr.split(" ").length!=1)
-                {
-                    System.out.println("KEYWORD ERROR FOUND!!");
-                    System.exit(0);
-                }//for keyword error.
-//
-                else
-                {
-                /////////////////////////////////
-
+            } else {
                 String data3 = "";
                 data3 += keyword;
                 while (data.charAt(i) != ';') {
@@ -300,7 +253,7 @@ public class Core {
                 i++;
                 System.out.println(data3 + "$$$$");
                 Coreassign.coreassign(data3);
-            }
+
             }
             // System.out.println(i+" "+data.length());
 
